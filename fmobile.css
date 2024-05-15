@@ -1,0 +1,633 @@
+:root {
+  --azul-base: #007bff;
+  --amarillo-base: #ffff00;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  /* color: #333; */
+}
+/* Estilos Base para Móviles */
+body, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+a {
+    text-decoration: none;
+  }
+  .titulo-pagina {
+    text-align: center;
+  }
+
+  .cabecera {
+    display: flex;
+    position: relative;
+    background-color: var(--azul-base);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo-header {
+    height: 60px;
+  }
+
+  /* Estilos para la Navegación */
+
+  .cabecera nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: rgba(0, 123, 255, 0.9);
+    width: 200px;
+    z-index: 1000;
+  }
+ 
+  .cabecera nav ul {
+    text-align: right;
+    list-style: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+  }
+  /* .cabecera nav ul {
+  background-color: aqua;
+} */
+.cabecera nav ul li {
+  /* border: none; */
+  padding: 5px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 0.5px solid #ffff00;
+}
+
+  .cabecera  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* border: solid 2px; */
+    font-size: 1.3rem;
+    margin: 5px 5px;
+    padding: 5px;
+    height: 20px;
+  }
+  /* Estilo para el botón de menú hamburguesa */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  /* color: var(--amarillo-base); */
+  font-size: 35px;
+  cursor: pointer;
+  display: block;
+  /* position: absolute; */
+  right: 20px;
+  top: 10px;
+}
+
+/* Mostrar menú cuando esté activo */
+.cabecera.nav-active nav {
+  /* display: flex; */
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%; /* Ajusta según necesidades */
+}
+
+.main-nosotros {
+  margin: 20px;
+}
+
+  /* Estilos para la Sección de Anuncios */
+  .slider {
+    overflow: hidden;
+  }
+
+  .anuncio {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    min-height: 200px;
+  }
+  .anuncio h2,
+  .anuncio p {
+    background-color: rgba(0,0,0,0.5);
+  }
+  .anuncio h2 {
+    margin: 0;
+    padding: 20px;
+    margin-top: 20%;
+  }
+  .anuncio p {
+    padding: 20px 0;
+  }
+  .anuncio a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .boton-anuncio {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 25px;
+  }
+
+  .anuncio1,
+  .anuncio2,
+  .anuncio3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+  }
+  .anuncio1 {
+    background-image: url('img/nube_y_sol_todos_en_el_patio.jpeg');
+  }
+  .anuncio2 {
+    background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
+  }
+  .anuncio3 {
+    background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
+  }
+
+  .item-imagen {
+    height: 30vh;
+    width: auto;
+  }
+
+  /* Sobre Nosotros */
+  #sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0;
+    background-color: #f0f0f0;
+  }
+
+  /* #sobre-nosotros h2,
+  #sobre-nosotros h3 {
+    color: #333;
+    margin: 30px 0 15px 0;
+  } */
+  .sobre-nosotros--container1 h2 {
+    text-align: center;
+  }
+  .sobre-nosotros--container1 h3 {
+    color: rgb(165, 42, 42);
+  }
+
+  #sobre-nosotros .contenido {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sobre-nosotros .mensaje-director {
+    margin-top: 20px;
+  }
+  .sobre-nosotros--container1,
+  .sobre-nosotros--container2 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .sobre-nosotros--container1 p {
+    font-style: italic;
+  }
+  .img-nosotros {
+    width: 80%;
+    border-radius: 50%;
+    border: solid 10px var(--azul-base);
+    margin-top: 30px;
+  }
+
+  /* Calendario Escolar */
+  #calendario-escolar {
+    display: flex;
+    flex-direction: column;
+    background-color: #007bff;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .boton-calendario {
+    border-radius: 10px;
+    border: solid 1px #fff;
+    width: 200px;
+  }
+  #calendario-escolar a {
+    color: #fff;
+  }
+  #calendario-escolar .calendario-intro {
+    color: white;
+    margin-bottom: 20px;
+  }
+  #calendario-escolar #calendario img {
+    width: 80vw;
+  }
+  /* Seccion Galería de Imágenes (home) */
+  #galeria {
+    padding: 20px;
+  }
+
+  #galeria h2 {
+    margin-bottom: 20px;
+  }
+
+  #galeria .imagenes img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallery {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #333;
+  }
+
+  .image-container {
+    display: inline-block;
+    /* display: flex; */
+    /* align-items: center; */
+    margin: 10px;
+    background-color: #ffff00;
+  }
+
+  .image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .mapa-container iframe {
+    height: 200px;
+    width: 350px;
+  }
+  /* Pie de página */
+  footer {
+    background-color: #f8f9fa;
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  .footer-x {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    height: 100px;
+  }
+
+  .contenedor-redes {
+    display: flex;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: self-end;
+    /* position: fixed; */
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    /* Fondo opcional para mejorar la visibilidad */
+    /* background: rgba(0, 0, 0, 0.5);  */
+}
+
+.link-contacto {
+    display: block;
+    margin: 0 10px;
+}
+.link-contacto img {
+  width: 25px;
+  }
+  
+  .link-contacto:hover img {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+  }
+
+  .copyright-style {
+    height: 20px;
+    background-color: #333;
+    color: #007bff;
+    font-size: 1.1rem;
+  }
+
+  .publicacion-fb {
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+  }
+
+  .img-provisional {
+    text-align: center;
+    background-color: var(--amarillo-base);
+  }
+  .img-provisional h1 {
+    /* margin-top: 20px; */
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(110, 110, 110);
+  }
+  .item-img-provisional {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+
+  /* pagina calendario */
+  .publicacion-ig,
+  .publicacion-fb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .publicacion-fb h3 {
+    margin: 20px 0;
+  }
+  .publicacion-fb iframe {
+    max-width: 95vw;
+  }
+
+  /* Página: Equipo Profesional */
+  .galeria-team {
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    background-color: var(--azul-base);
+    padding-top: 20px;
+}
+.titulo-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* background-color: var(--azul-base); */
+  /* color: #fff; */
+}
+.galeria-team-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  color: #fff;
+}
+.galeria-team .galeria-team-item img {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.galeria-team-item label span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.section--niveles-educativos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  text-align: center;
+}
+.section--niveles-educativos h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.niveles-container-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  background-color: var(--amarillo-base);
+  border-radius: 20px 20px 0 0;
+}
+.titulo-nivel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  width: 120px;
+  height: 120px;
+  border-radius: 30%;
+  border: solid 4px #fff;
+  color: #fff;
+  background-color: var(--azul-base);
+}
+.boton--solicitud-evaluacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Quicksand", sans-serif; */
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: #ffa200;
+  color: #fff;
+  height: fit-content;
+  width: 80%;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+  /* Ajustes para pantallas más grandes con Media Queries */
+@media (min-width: 768px) {
+    body {
+      padding-top: 120px;
+    }
+    
+    .cabecera {
+      padding: 10px 40px;
+      /* estilos cabecera fija */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+    }
+    .logo-header {
+      height: 100px;
+    }
+    .cabecera nav {
+      display: flex;
+      /* position. Restablece la posición en pantallas grandes */
+      position: static;
+      border: none;
+      /* background-color. Restablece el fondo en pantallas grandes */
+      background-color: transparent;
+      width: auto; /* Restablece el ancho en pantallas grandes */
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .cabecera nav ul {
+      flex-direction: row;
+      margin: 0;
+    }
+    .cabecera nav ul li {
+      border: none;
+      /* margin-left: 20px; */
+    }
+    .cabecera  nav ul li a {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .slider {
+      position: relative;
+    }
+
+    .anuncio {
+      /* min-height: 300px; */
+      height: 80vh;
+      position: relative;
+      padding: 0;
+    }
+
+    .anuncio3 {
+      background-position-y: 25%;
+    }
+
+    .anuncio h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .anuncio p {
+      /* font-family: 'Roboto', sans-serif; */
+      /* font-weight: 700; */
+      padding: 20px 0;
+      /* color: #091688;
+      text-shadow: 2px 2px 4px #00ccff; */
+    }
+    .boton-anuncio a {
+      margin-top: 20px;
+      position: absolute;
+      width: 100%;
+    }
+
+    #sobre-nosotros {
+      /* display: flex; */
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      /* padding: 200px; */
+      /* height: 80vh; */
+    }
+  .sobre-nosotros--container1,
+  .sobre-nosotros--container2 {
+    padding: 0 50px;
+  }
+    /* .sobre-nosotros--container1 {
+      padding: 20px 40px;
+    } */
+    /* .sobre-nosotros--container2 {
+      text-align: center;
+    } */
+    .img-nosotros {
+      width: 50%;
+      margin-top: auto;
+    }
+    /* Calendario Escolar */
+  #calendario-escolar {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #calendario-escolar #calendario img {
+    width: 250px;
+
+  }
+
+  /* esta imagen se esta usando en:  */
+  .item-img-provisional {
+    width: 50%;
+  }
+  /* .publicacion-fb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .publicacion-fb h3 {
+    margin: 20px 0;
+  } */
+    /* Aquí puedes añadir más estilos específicos para pantallas grandes */
+
+  .galeria-team {
+      /* display: grid; */
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      padding: 20px 50px;
+  }
+  /* .galeria-team-item {
+    text-align: center;
+  } */
+  
+  /* .galeria-team img {
+      height: auto;
+  } */
+
+  .niveles-container-home {
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+  }
+
+  .boton--solicitud-evaluacion {
+    width: fit-content;
+    padding: 15px 50px;
+  }
+
+  .contenedor-redes {
+    /* display: block;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px; */
+    display: flex;
+}
+
+.link-contacto {
+    /* display: block; */
+    margin: 10px;
+}
+  
+}

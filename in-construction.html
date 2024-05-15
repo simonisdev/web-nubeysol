@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela de lenguaje Nube y Sol</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            background-color: #007BFF;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-container img {
+            height: 60%;
+        }
+        .logo-container h1 {
+            margin-top: 30px;
+            color: #F9EB1D;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .contenedor-redes {
+            display: block;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-right: 10px;
+        }
+  
+        .link-contacto {
+            display: block;
+            margin: 10px 0;
+        }
+        .link-contacto img {
+        width: 25px;
+        }
+        
+        .link-contacto:hover img {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+        .logo-container{
+            height: 90vh;
+        }
+        .logo-container img {
+            height: 40%;
+        }
+        .logo-container h1 {
+            font-size: 16px;
+        }
+
+        .contenedor-redes {
+            display: flex;
+            height: 10vh;
+            flex-direction: row;
+            justify-content: center;
+            align-items: self-end;
+            position: fixed;
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            /* Fondo opcional para mejorar la visibilidad */
+            /* background: rgba(0, 0, 0, 0.5);  */
+        }
+
+        .link-contacto {
+            margin: 0 10px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/logo_escuela_nube_y_sol.png" alt="">
+        <h1>Estamos creando nuestro espacio online... nos conectamos pronto</h1>
+    </div>
+
+    <!-- RRSS -->
+    <div class="contenedor-redes">
+        <a class="link-contacto" href="https://www.facebook.com/Escuelalenguajenubeysol/" target="_blank">
+            <img src="img/rrss/facebook.png" alt="Facebook">
+        </a>
+        <a class="link-contacto" href="https://www.instagram.com/escuelalenguajenubeysol/" target="_blank">
+            <img src="img/rrss/instagram.png" alt="Instagram">
+        </a>
+        <a class="link-contacto" href="https://api.whatsapp.com/send?phone=56945484837" target="_blank">
+            <img src="img/rrss/whatsapp.png" alt="Whatsapp">
+        </a>
+        <!-- enlace a seccion contacto -->
+        <a class="link-contacto" href="https://maps.app.goo.gl/iTjD3FDxBGhFQzMG7" target="_blank">
+            <img src="img/rrss/icono_mapa.png" alt="Contacto" title="Contacto">
+        </a>
+    </div>
+
+</body>
+</html>

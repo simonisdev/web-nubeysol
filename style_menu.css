@@ -1,0 +1,155 @@
+:root {
+    /* Definicion de colores */
+    --azul-base: #007bff;
+    --amarillo-base: #ffff00;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 16px;
+  }
+
+  
+  .cabecera-x {
+    position:absolute;
+    top: 0;
+    display: flex;
+    background-color: var(--azul-base);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .cabecera {
+    position: relative;
+    display: flex;
+    background-color: var(--azul-base);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo-header {
+    height: 60px;
+  }
+
+  /* Estilos para la Navegación */
+
+  .cabecera nav {
+    display: none;
+    position: absolute;
+    /* padding: 5px 10px; */
+    right: 0;
+    top: 100%;
+    background-color: rgba(0, 123, 255, 0.9);
+    /* border: 1px solid #ccc; */
+    width: 200px;
+    z-index: 1000;
+  }
+  .cabecera nav ul {
+    /* background-color: #007bff; */
+    text-align: right;
+    list-style: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+  }
+  /* .cabecera nav ul {
+  background-color: aqua;
+} */
+.cabecera nav ul li {
+  /* border: none; */
+  padding: 5px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 0.5px solid #ffff00;
+}
+
+  .cabecera  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* border: solid 2px; */
+    font-size: 1.3rem;
+    margin: 5px 5px;
+    padding: 5px;
+    height: 20px;
+  }
+  /* Estilo para el botón de menú hamburguesa */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--amarillo-base);
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* Mostrar menú cuando esté activo */
+.cabecera.nav-active nav {
+  /* display: flex; */
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%; /* Ajusta según necesidades */
+}
+
+@media (min-width: 768px) {
+  .cabecera-x {
+    padding: 10px 40px;
+    /* estilos cabecera fija */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+    /* background-color: rgba(0, 123, 255, 0.1); */
+  }
+    .cabecera {
+        padding: 10px 40px;
+        /* estilos cabecera fija */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1050;
+        /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+        /* background-color: rgba(0, 123, 255, 0.1); */
+      }
+      .logo-header {
+        height: 100px;
+      }
+      .cabecera nav {
+        display: flex;
+        /* position. Restablece la posición en pantallas grandes */
+        position: static;
+        border: none;
+        /* background-color. Restablece el fondo en pantallas grandes */
+        background-color: transparent;
+        width: auto; /* Restablece el ancho en pantallas grandes */
+      }
+      .menu-toggle {
+        display: none;
+      }
+      .cabecera nav ul {
+        flex-direction: row;
+        margin: 0;
+      }
+      .cabecera nav ul li {
+        border: none;
+        /* margin-left: 20px; */
+      }
+      .cabecera  nav ul li a {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+}
