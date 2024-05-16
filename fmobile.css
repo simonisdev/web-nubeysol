@@ -25,359 +25,354 @@ a {
   }
   .titulo-pagina {
     text-align: center;
-  }
-
-  .cabecera {
-    display: flex;
-    position: relative;
-    background-color: var(--azul-base);
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .logo-header {
-    height: 60px;
-  }
-
-  /* Estilos para la Navegación */
-
-  .cabecera nav {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: rgba(0, 123, 255, 0.9);
-    width: 200px;
-    z-index: 1000;
-  }
- 
-  .cabecera nav ul {
-    text-align: right;
-    list-style: none;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* gap: 10px; */
-  }
-  /* .cabecera nav ul {
-  background-color: aqua;
-} */
-.cabecera nav ul li {
-  /* border: none; */
-  padding: 5px 0;
-  border-top: 1px solid #ffffff;
-  border-bottom: 0.5px solid #ffff00;
 }
 
-  .cabecera  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    /* border: solid 2px; */
-    font-size: 1.3rem;
-    margin: 5px 5px;
-    padding: 5px;
-    height: 20px;
-  }
-  /* Estilo para el botón de menú hamburguesa */
-.menu-toggle {
-  background: none;
-  border: none;
+  /* Estilos para la cabecera */
+.cabecera {
+  display: flex;
+  position: relative;
+  background-color: var(--azul-base);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo-header {
+  height: 60px;
+}
+
+/* Estilos para el menu de navegación */
+.cabecera nav {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: rgba(0, 123, 255, 0.9);
+  width: 200px;
+  z-index: 1000;
+}
+
+.cabecera nav ul {
+  text-align: right;
+  list-style: none;
   color: #fff;
-  /* color: var(--amarillo-base); */
-  font-size: 35px;
-  cursor: pointer;
-  display: block;
-  /* position: absolute; */
-  right: 20px;
-  top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera nav ul li {
+/* border: none; */
+padding: 5px 0;
+border-top: 1px solid #ffffff;
+border-bottom: 0.5px solid #ffff00;
+}
+
+.cabecera  nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  /* border: solid 2px; */
+  font-size: 1.3rem;
+  margin: 5px 5px;
+  padding: 5px;
+  height: 20px;
+}
+/* Estilo para el botón de menú hamburguesa */
+.menu-toggle {
+background: none;
+border: none;
+color: #fff;
+/* color: var(--amarillo-base); */
+font-size: 35px;
+cursor: pointer;
+display: block;
+/* position: absolute; */
+right: 20px;
+top: 10px;
 }
 
 /* Mostrar menú cuando esté activo */
 .cabecera.nav-active nav {
-  /* display: flex; */
-  display: block;
+display: block;
+flex-direction: column;
+align-items: flex-start;
+width: 50%;
+}
+
+/* Estilos para la Sección de Anuncios */
+.slider {
+  overflow: hidden;
+}
+.anuncio {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  min-height: 200px;
+}
+.anuncio h2,
+.anuncio p {
+  background-color: rgba(0,0,0,0.5);
+}
+.anuncio h2 {
+  margin: 0;
+  padding: 20px;
+  margin-top: 20%;
+}
+.anuncio p {
+  padding: 20px 0;
+}
+.anuncio a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.boton-anuncio {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.anuncio1,
+.anuncio2,
+.anuncio3,
+.anuncio4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+}
+.anuncio1 {
+  background-image: url('img/nube_y_sol_todos_en_el_patio.jpeg');
+}
+.anuncio2 {
+  background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
+}
+.anuncio3 {
+  background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
+}
+.anuncio4 {
+  background-color: #ffa200;
+}
+
+.item-imagen {
+  height: 30vh;
+  width: auto;
+}
+
+/* Sobre Nosotros */
+#sobre-nosotros {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 50%; /* Ajusta según necesidades */
+  padding: 35px 0;
+  background-color: #f0f0f0;
 }
 
-.main-nosotros {
-  margin: 20px;
+/* #sobre-nosotros h2,
+#sobre-nosotros h3 {
+  color: #333;
+  margin: 30px 0 15px 0;
+} */
+.sobre-nosotros--container1 h2 {
+  text-align: center;
+}
+.sobre-nosotros--container1 h3 {
+  color: rgb(165, 42, 42);
 }
 
-  /* Estilos para la Sección de Anuncios */
-  .slider {
-    overflow: hidden;
-  }
+#sobre-nosotros .contenido {
+  display: flex;
+  flex-direction: column;
+}
 
-  .anuncio {
-    display: none;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px 0;
-    min-height: 200px;
-  }
-  .anuncio h2,
-  .anuncio p {
-    background-color: rgba(0,0,0,0.5);
-  }
-  .anuncio h2 {
-    margin: 0;
-    padding: 20px;
-    margin-top: 20%;
-  }
-  .anuncio p {
-    padding: 20px 0;
-  }
-  .anuncio a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  .boton-anuncio {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 25px;
-  }
+#sobre-nosotros .mensaje-director {
+  margin-top: 20px;
+}
+.sobre-nosotros--container1,
+.sobre-nosotros--container2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
 
-  .anuncio1,
-  .anuncio2,
-  .anuncio3 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+.sobre-nosotros--container1 p {
+  font-style: italic;
+}
+.img-nosotros {
+  width: 80%;
+  border-radius: 50%;
+  border: solid 10px var(--azul-base);
+  margin-top: 30px;
+}
 
-  }
-  .anuncio1 {
-    background-image: url('img/nube_y_sol_todos_en_el_patio.jpeg');
-  }
-  .anuncio2 {
-    background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
-  }
-  .anuncio3 {
-    background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
-  }
+/* Calendario Escolar */
+#calendario-escolar {
+  display: flex;
+  flex-direction: column;
+  background-color: #007bff;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.boton-calendario {
+  border-radius: 10px;
+  border: solid 1px #fff;
+  width: 200px;
+}
+#calendario-escolar a {
+  color: #fff;
+}
+#calendario-escolar .calendario-intro {
+  color: white;
+  margin-bottom: 20px;
+}
+#calendario-escolar #calendario img {
+  width: 80vw;
+}
+/* Seccion Galería de Imágenes (home) */
+#galeria {
+  padding: 20px;
+}
 
-  .item-imagen {
-    height: 30vh;
-    width: auto;
-  }
+#galeria h2 {
+  margin-bottom: 20px;
+}
 
-  /* Sobre Nosotros */
-  #sobre-nosotros {
-    display: flex;
-    flex-direction: column;
-    padding: 35px 0;
-    background-color: #f0f0f0;
-  }
+#galeria .imagenes img {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-  /* #sobre-nosotros h2,
-  #sobre-nosotros h3 {
-    color: #333;
-    margin: 30px 0 15px 0;
-  } */
-  .sobre-nosotros--container1 h2 {
-    text-align: center;
-  }
-  .sobre-nosotros--container1 h3 {
-    color: rgb(165, 42, 42);
-  }
+.gallery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #333;
+}
 
-  #sobre-nosotros .contenido {
-    display: flex;
-    flex-direction: column;
-  }
+.image-container {
+  display: inline-block;
+  /* display: flex; */
+  /* align-items: center; */
+  margin: 10px;
+  background-color: #ffff00;
+}
 
-  #sobre-nosotros .mensaje-director {
-    margin-top: 20px;
-  }
-  .sobre-nosotros--container1,
-  .sobre-nosotros--container2 {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 0 20px;
-  }
+.image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
 
-  .sobre-nosotros--container1 p {
-    font-style: italic;
-  }
-  .img-nosotros {
-    width: 80%;
-    border-radius: 50%;
-    border: solid 10px var(--azul-base);
-    margin-top: 30px;
-  }
+.mapa-container iframe {
+  height: 200px;
+  width: 350px;
+}
 
-  /* Calendario Escolar */
-  #calendario-escolar {
-    display: flex;
-    flex-direction: column;
-    background-color: #007bff;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .boton-calendario {
-    border-radius: 10px;
-    border: solid 1px #fff;
-    width: 200px;
-  }
-  #calendario-escolar a {
-    color: #fff;
-  }
-  #calendario-escolar .calendario-intro {
-    color: white;
-    margin-bottom: 20px;
-  }
-  #calendario-escolar #calendario img {
-    width: 80vw;
-  }
-  /* Seccion Galería de Imágenes (home) */
-  #galeria {
-    padding: 20px;
-  }
+/* Pie de página */
+footer {
+  background-color: #f8f9fa;
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.footer-x {
+  position: fixed;
+  bottom: 0;
+}
 
-  #galeria h2 {
-    margin-bottom: 20px;
-  }
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  height: 100px;
+}
 
-  #galeria .imagenes img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .gallery {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    background-color: #333;
-  }
-
-  .image-container {
-    display: inline-block;
-    /* display: flex; */
-    /* align-items: center; */
-    margin: 10px;
-    background-color: #ffff00;
-  }
-
-  .image {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .mapa-container iframe {
-    height: 200px;
-    width: 350px;
-  }
-  /* Pie de página */
-  footer {
-    background-color: #f8f9fa;
-    /* position: absolute; */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-  }
-  .footer-x {
-    position: fixed;
-    bottom: 0;
-  }
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #007bff;
-    height: 100px;
-  }
-
-  .contenedor-redes {
-    display: flex;
-    height: 10vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: self-end;
-    /* position: fixed; */
-    top: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 10px;
-    /* Fondo opcional para mejorar la visibilidad */
-    /* background: rgba(0, 0, 0, 0.5);  */
+.contenedor-redes {
+  display: flex;
+  height: 10vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: self-end;
+  /* position: fixed; */
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  /* Fondo opcional para mejorar la visibilidad */
+  /* background: rgba(0, 0, 0, 0.5);  */
 }
 
 .link-contacto {
-    display: block;
-    margin: 0 10px;
+  display: block;
+  margin: 0 10px;
 }
 .link-contacto img {
-  width: 25px;
-  }
-  
-  .link-contacto:hover img {
-      transform: scale(1.1);
-      transition: transform 0.3s ease;
-  }
+width: 25px;
+}
 
-  .copyright-style {
-    height: 20px;
-    background-color: #333;
-    color: #007bff;
-    font-size: 1.1rem;
-  }
+.link-contacto:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 
-  .publicacion-fb {
-    display: flex;
-    justify-content: center;
-    background-color: #007bff;
-  }
+.copyright-style {
+  height: 20px;
+  background-color: #333;
+  color: #007bff;
+  font-size: 1.1rem;
+}
 
-  .img-provisional {
-    text-align: center;
-    background-color: var(--amarillo-base);
-  }
-  .img-provisional h1 {
-    /* margin-top: 20px; */
-    padding-top: 20px;
-    text-align: center;
-    color: rgb(110, 110, 110);
-  }
-  .item-img-provisional {
-    width: 100%;
-    margin: 20px 0 0 0;
-  }
+.publicacion-fb {
+  display: flex;
+  justify-content: center;
+  background-color: #007bff;
+}
 
-  /* pagina calendario */
-  .publicacion-ig,
-  .publicacion-fb {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .publicacion-fb h3 {
-    margin: 20px 0;
-  }
-  .publicacion-fb iframe {
-    max-width: 95vw;
-  }
+.img-provisional {
+  text-align: center;
+  background-color: var(--amarillo-base);
+}
+.img-provisional h1 {
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  text-align: center;
+  color: rgb(110, 110, 110);
+}
+.item-img-provisional {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+/* pagina calendario */
+.publicacion-ig,
+.publicacion-fb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.publicacion-fb h3 {
+  margin: 20px 0;
+}
+.publicacion-fb iframe {
+  max-width: 95vw;
+}
 
   /* Página: Equipo Profesional */
-  .galeria-team {
+.galeria-team {
     display: grid;
     /* flex-direction: column; */
     grid-template-columns: 1fr;
@@ -467,6 +462,11 @@ a {
   border-radius: 15px;
 }
 
+/* PAGINA NOSOTROS */
+.main-nosotros {
+  margin: 20px;
+  }
+
   /* Ajustes para pantallas más grandes con Media Queries */
 @media (min-width: 768px) {
     body {
@@ -492,7 +492,8 @@ a {
       border: none;
       /* background-color. Restablece el fondo en pantallas grandes */
       background-color: transparent;
-      width: auto; /* Restablece el ancho en pantallas grandes */
+      /* width. Restablece el ancho en pantallas grandes */
+      width: auto;
     }
     .menu-toggle {
       display: none;
@@ -513,9 +514,7 @@ a {
     .slider {
       position: relative;
     }
-
     .anuncio {
-      /* min-height: 300px; */
       height: 80vh;
       position: relative;
       padding: 0;
