@@ -432,7 +432,9 @@ width: 25px;
   width: 250px;
   height: 250px;
   margin: 15px;
-  background-color: var(--amarillo-base);
+  /* background-color: var(--amarillo-base); */
+  background-color: #E10716;
+  color: #fff;
   border-radius: 20px 20px 0 0;
 }
 .titulo-nivel {
@@ -460,6 +462,22 @@ width: 25px;
   width: 80%;
   padding: 15px;
   border-radius: 15px;
+}
+
+/* lista de servicios adicionales */
+.caracteristicas-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.caracteristica {
+  flex: 1 1 100%; /* Asumiendo que quieras que ocupen toda la anchura en móviles */
+  margin-bottom: 10px; /* Espaciado entre ítems */
+}
+
+.icono {
+  margin-right: 10px; /* Espaciado entre el icono y el texto */
 }
 
 /* PAGINA NOSOTROS */
@@ -613,6 +631,17 @@ width: 25px;
     width: fit-content;
     padding: 15px 50px;
   }
+
+  .caracteristicas-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .caracteristica {
+    flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
+  }
+    
 
   .contenedor-redes {
     /* display: block;
