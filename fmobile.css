@@ -115,9 +115,10 @@ width: 50%;
   background-color: rgba(0,0,0,0.5);
 }
 .anuncio h2 {
-  margin: 0;
+  font-size: 3.5rem;
+  /* margin: 0; */
   padding: 20px;
-  margin-top: 20%;
+  /* margin-top: 20%; */
 }
 .anuncio p {
   padding: 20px 0;
@@ -155,6 +156,7 @@ width: 50%;
 }
 .anuncio4 {
   background-color: #ffa200;
+  background-image: url('img/fondo_escuela_feliz.jpeg');
 }
 
 .item-imagen {
@@ -542,10 +544,10 @@ width: 25px;
       background-position-y: 25%;
     }
 
-    .anuncio h2 {
+    /* .anuncio h2 {
       font-size: 24px;
       margin: 0;
-    }
+    } */
 
     .anuncio p {
       /* font-family: 'Roboto', sans-serif; */
