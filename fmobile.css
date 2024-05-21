@@ -411,6 +411,8 @@ width: 25px;
 
 .section--niveles-educativos {
   display: flex;
+  /* background-color: rgba(165, 42, 42, .3); */
+  background-image: url(img/provisional_img/patron-dibujos-infantiles.jpg);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -456,7 +458,7 @@ width: 25px;
   justify-content: center;
   align-items: center;
   /* font-family: "Quicksand", sans-serif; */
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   background-color: #ffa200;
   color: #fff;
@@ -632,6 +634,7 @@ width: 25px;
   .boton--solicitud-evaluacion {
     width: fit-content;
     padding: 15px 50px;
+    font-size: 3rem;
   }
 
   .caracteristicas-container {
