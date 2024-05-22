@@ -155,7 +155,6 @@ width: 50%;
   background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
 }
 .anuncio4 {
-  background-color: #ffa200;
   background-image: url('img/fondo_escuela_feliz.jpeg');
 }
 
@@ -168,29 +167,12 @@ width: 50%;
 #sobre-nosotros {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   padding: 35px 0;
   background-color: #f0f0f0;
 }
-
-/* #sobre-nosotros h2,
-#sobre-nosotros h3 {
-  color: #333;
-  margin: 30px 0 15px 0;
-} */
-.sobre-nosotros--container1 h2 {
-  text-align: center;
-}
-.sobre-nosotros--container1 h3 {
-  color: rgb(165, 42, 42);
-}
-
-#sobre-nosotros .contenido {
-  display: flex;
-  flex-direction: column;
-}
-
-#sobre-nosotros .mensaje-director {
-  margin-top: 20px;
+.sobre-nosotros--container2 {
+  cursor: pointer;
 }
 .sobre-nosotros--container1,
 .sobre-nosotros--container2 {
@@ -199,6 +181,17 @@ width: 50%;
   text-align: center;
   padding: 0 20px;
 }
+.sobre-nosotros--container1 h2 {
+  text-align: center;
+}
+.sobre-nosotros--container1 h3 {
+  color: rgb(165, 42, 42);
+}
+
+/* #sobre-nosotros .contenido {
+  display: flex;
+  flex-direction: column;
+} */
 
 .sobre-nosotros--container1 p {
   font-style: italic;
@@ -209,20 +202,76 @@ width: 50%;
   border: solid 10px var(--azul-base);
   margin-top: 30px;
 }
+#sobre-nosotros .mensaje-director {
+  margin-top: 20px;
+  font-style: oblique;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px white;  
+}
+/* popup mensaje del director */
+/* Estilo del Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-option {
+  display: none;
+}
+.popup-option img {
+  height: 200px;
+}
+
+.popup-option.active {
+  display: block;
+}
+/* fin del mensaje del director */
 
 /* Calendario Escolar */
 #calendario-escolar {
   display: flex;
   flex-direction: column;
   background-color: #007bff;
+  height: 100vh;
   padding: 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
+  border-radius: 15px 15px 0 0;
 }
 .boton-calendario {
   border-radius: 10px;
-  border: solid 1px #fff;
+  /* border: solid 1px #fff; */
   width: 200px;
 }
 #calendario-escolar a {
@@ -237,13 +286,18 @@ width: 50%;
 }
 /* Seccion Galería de Imágenes (home) */
 #galeria {
-  padding: 20px;
+  /* padding: 20px; */
+  padding: 0;
+  background-color: #ffa200;
+  border-radius: 15px 15px 0 0;
+  margin-top: -15px;
 }
-
 #galeria h2 {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  padding: 30px;
+  font-size: 1.5rem;
+  color: #fff;
 }
-
 #galeria .imagenes img {
   width: 100%;
   margin-bottom: 20px;
@@ -255,22 +309,114 @@ width: 50%;
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  background-color: #333;
+  background-color: rgba(150, 150, 150, 0.5);
+  padding: 20px 4px;
 }
 
 .image-container {
   display: inline-block;
-  /* display: flex; */
+  display: flex;
   /* align-items: center; */
-  margin: 10px;
-  background-color: #ffff00;
+  margin: 2px;
 }
 
-.image {
+.item-imagen {
+  height: 50vh;
+  width: 80vw;
+  object-fit: cover;
+  padding: 10px 2px;
+}
+/* .image {
   width: 300px;
   height: 200px;
   object-fit: cover;
+} */
+
+/* GALERIA DE IMAGENES CON POPUP */
+/* Estilo de la galería de imágenes */
+.galeria-container {
+  display: none;
+  /* display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between; */
+  /* margin: 20px 0; */
 }
+
+.galeria-item {
+  flex: 1;
+  /* margin: 0 5px; */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.galeria-item img {
+  /* width: 100%; */
+  /* height: auto; */
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+/* style="text-align: end; margin-right: 20px;" */
+.ver-mas {
+  display: block;
+  text-align: end;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Estilo del visor de imagen */
+.image-viewer {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-viewer-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+.close-viewer {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-viewer:hover,
+.close-viewer:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#viewer-image {
+  width: 100%;
+  height: auto;
+}
+/* FIN GALERIA DE IMAGENES CON POPUP */
+
 
 .mapa-container iframe {
   height: 200px;
@@ -409,6 +555,7 @@ width: 25px;
   font-size: 1.3rem;
 }
 
+/* SECCION NIVELES EDUCATIVOS */
 .section--niveles-educativos {
   display: flex;
   /* background-color: rgba(165, 42, 42, .3); */
@@ -418,6 +565,7 @@ width: 25px;
   align-items: center;
   padding: 30px 0;
   text-align: center;
+  border-radius: 15px;
 }
 .section--niveles-educativos h2 {
   text-align: center;
@@ -476,8 +624,12 @@ width: 25px;
 }
 
 .caracteristica {
-  flex: 1 1 100%; /* Asumiendo que quieras que ocupen toda la anchura en móviles */
-  margin-bottom: 10px; /* Espaciado entre ítems */
+  /* Asumiendo que quieras que ocupen toda la anchura en móviles */
+  flex: 1 1 100%;
+  /* Espaciado entre ítems */
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
 }
 
 .icono {
@@ -494,7 +646,7 @@ width: 25px;
     body {
       padding-top: 120px;
     }
-    
+
     .cabecera {
       padding: 10px 40px;
       /* estilos cabecera fija */
@@ -565,27 +717,26 @@ width: 25px;
     }
 
     #sobre-nosotros {
-      /* display: flex; */
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
       /* padding: 200px; */
-      /* height: 80vh; */
+      height: 70vh;
     }
   .sobre-nosotros--container1,
   .sobre-nosotros--container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0 50px;
   }
-    /* .sobre-nosotros--container1 {
-      padding: 20px 40px;
-    } */
-    /* .sobre-nosotros--container2 {
-      text-align: center;
-    } */
-    .img-nosotros {
+  
+  .img-nosotros {
       width: 50%;
-      margin-top: auto;
-    }
+      /* margin-top: auto; */
+  }
+
     /* Calendario Escolar */
   #calendario-escolar {
     flex-direction: row;
@@ -612,6 +763,9 @@ width: 25px;
   } */
     /* Aquí puedes añadir más estilos específicos para pantallas grandes */
 
+  #galeria h2 {
+    font-size: 2rem;
+  }
   .galeria-team {
       /* display: grid; */
       grid-template-columns: repeat(4, 1fr);
@@ -621,11 +775,37 @@ width: 25px;
   /* .galeria-team-item {
     text-align: center;
   } */
-  
+
   /* .galeria-team img {
       height: auto;
   } */
 
+  /* popup mensaje del director */
+  .popup-option.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* fin popup mensaje del director */
+
+  .gallery {
+    display: none;
+  }
+  .galeria-container {
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .galeria-item img {
+    height: 75vh;
+    width: auto;
+  }
+
+  .section--niveles-educativos {
+    padding: 30px 100px;
+  }
   .niveles-container-home {
     flex-direction: row;
     /* justify-content: space-evenly; */
@@ -642,11 +822,11 @@ width: 25px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .caracteristica {
     flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
   }
-    
+
 
   .contenedor-redes {
     /* display: block;
@@ -662,5 +842,5 @@ width: 25px;
     /* display: block; */
     margin: 10px;
 }
-  
+
 }

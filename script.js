@@ -68,3 +68,71 @@ document.addEventListener('DOMContentLoaded', function() {
 //         })
 //        .catch(error => console.error('Error al cargar el menú:', error));
 // });
+
+// MENSAJE DEL DIRECTOR
+document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('popup');
+  const closeButton = document.querySelector('.close-button');
+  const container = document.querySelector('.sobre-nosotros--container2');
+
+  // Opciones del popup
+  const option1 = document.getElementById('popup-option1');
+  const option2 = document.getElementById('popup-option2');
+
+  // Función para abrir el popup
+  function openPopup(option) {
+      popup.style.display = 'block';
+      if (option === 1) {
+          option1.classList.add('active');
+          option2.classList.remove('active');
+      } else if (option === 2) {
+          option1.classList.remove('active');
+          option2.classList.add('active');
+      }
+  }
+
+  // Función para cerrar el popup
+  function closePopup() {
+      popup.style.display = 'none';
+      option1.classList.remove('active');
+      option2.classList.remove('active');
+  }
+
+  // Evento para abrir el popup al hacer clic en el contenedor
+  container.addEventListener('click', () => openPopup(1)); // Cambia a 2 si deseas mostrar el video
+
+  // Evento para cerrar el popup al hacer clic en el botón de cerrar
+  closeButton.addEventListener('click', closePopup);
+
+  // Evento para cerrar el popup al hacer clic fuera del contenido del popup
+  window.addEventListener('click', (event) => {
+      if (event.target === popup) {
+          closePopup();
+      }
+  });
+});
+
+// GALERIA DE IMAGENES
+document.addEventListener('DOMContentLoaded', () => {
+  const viewer = document.getElementById('image-viewer');
+  const viewerImage = document.getElementById('viewer-image');
+  const closeViewer = document.querySelector('.close-viewer');
+  const galleryItems = document.querySelectorAll('.galeria-item img');
+
+  galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+          viewerImage.src = item.src;
+          viewer.style.display = 'block';
+      });
+  });
+
+  closeViewer.addEventListener('click', () => {
+      viewer.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target === viewer) {
+          viewer.style.display = 'none';
+      }
+  });
+});

@@ -20,7 +20,7 @@
     </a>
     <!-- <button class="menu-toggle" aria-label="Abrir menú">☰</button> -->
     <button class="menu-toggle" aria-label="Abrir menú"><img src="img/icons8-menú-48.png" alt=""></button>
-    
+
     <nav>
       <ul>
         <li><a href="nosotros.html">Sobre Nosotros</a></li>
@@ -56,7 +56,7 @@
     <a href="#" class="boton-anuncio">Ver publicación</a>
   </div>
 </section>
-  
+
 
   <section id="sobre-nosotros">
 
@@ -66,22 +66,37 @@
       <a href="nosotros.html">
         <h3><br>Te contamos sobre Nuestra Misi&oacute;n y Visi&oacute;n</h3>
       </a>
-      <div class="contenido">
-        <!-- <p>Misión: [Descripción de la misión de la escuela]</p>
-        <p>Visión: [Descripción de la visión de la escuela]</p>
-        <p>Valores: [Descripción de los valores de la escuela]</p> -->
-        <div class="mensaje-director">
-          <h4>Mensaje del Director</h4>
-          <!-- <p>[Mensaje del director]</p> -->
-        </div>
-      </div>
+      <!-- <div class="contenido">
+      </div> -->
     </div>
 
     <div class="sobre-nosotros--container2">
       <img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="" class="img-nosotros">
+      <div class="mensaje-director">
+        <h4>"Mensaje del Director"</h4>
+        <!-- <p>[Mensaje del director]</p> -->
+      </div>
     </div>
   </section>
-  
+
+  <!-- Contenedor del Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <div id="popup-option1" class="popup-option">
+        <img src="img/personal/VivianCarvajal_fondoBlanco.jpg" alt="Director">
+        <!-- <p>Este es el texto del mensaje del Director.</p> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis pariatur repudiandae iste ipsa rem, esse fugiat quos, vero debitis saepe quod magnam? Rem, possimus praesentium est mollitia minus commodi provident.</p>
+      </div>
+      <!-- <div id="popup-option2" class="popup-option">
+          <video controls>
+              <source src="videos/director.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de videos.
+          </video>
+      </div> -->
+  </div>
+</div>
+
 
   <section id="calendario-escolar">
     <div class="calendario-intro">
@@ -89,18 +104,20 @@
       <div class="boton-calendario">
         <a href="calendario.html">Conoce las actividades programadas aqu&iacute;...</a>
       </div>
-      
     </div>
+
     <div id="calendario">
-      <img src="img/provisional_img/calendario-escolar.jpg" alt="">
+      <a href="calendario.html">
+        <img src="img/provisional_img/calendario-escolar.jpg" alt="">
+      </a>
     </div>
   </section>
 
-
+<!-- SECCION GALERIA DE IMAGENES -->
 <section id="galeria">
   <a href="galeria.html">
-    <h2>Tenemos bonitos recuerdos y los queremos compartir... visita nuestra galer&iacute;a de fotos aqu&iacute;</h2></a> 
-  
+    <h2>Tenemos bonitos recuerdos y los queremos compartir...</h2></a>
+
   <div class="imagenes">
     <!-- Insertar imágenes aquí -->
     <!-- <img class="item-imagen" src="img/en la sala - visita cuidado dientes.jpeg" alt="Descripción de la imagen"> -->
@@ -113,20 +130,48 @@
       <img class="item-imagen" src="img/las tias en el parque.jpeg" alt="Equipo Nube y sol">
     </div>
     <div class="image-container">
-      <img class="image" src="img/en la sala - visita cuidado dientes.jpeg" alt="visita cuidado dientes">
+      <img class="item-imagen" src="img/en la sala - visita cuidado dientes.jpeg" alt="visita cuidado dientes">
     </div>
     <div class="image-container">
-      <img class="image" src="img/jardin tia mayo.jpeg" alt="Image 1">
+      <img class="item-imagen" src="img/jardin tia mayo.jpeg" alt="Image 1">
     </div>
     <div class="image-container">
-      <img class="image" src="img/dia de la familia 2023.jpeg" alt="Image 2">
+      <img class="item-imagen" src="img/dia de la familia 2023.jpeg" alt="Image 2">
     </div>
     <div class="image-container">
-      <img class="image" src="img/buscandoiguales.jpeg" alt="Image 3">
+      <img class="item-imagen" src="img/buscandoiguales.jpeg" alt="Image 3">
     </div>
   </div>
 
+  <!-- GALERIA DE IMAGENES CON POPUP -->
+  <div class="galeria-container">
+    <div class="galeria-item">
+        <img src="img/las tias en el parque.jpeg" alt="Imagen 1">
+    </div>
+    <div class="galeria-item">
+        <img src="img/en la sala - visita cuidado dientes.jpeg" alt="Imagen 2">
+    </div>
+    <div class="galeria-item">
+        <img src="img/jardin tia mayo.jpeg" alt="Imagen 3">
+    </div>
+    <div class="galeria-item">
+        <img src="img/dia de la familia 2023.jpeg" alt="Imagen 4">
+    </div>
+</div>
+<a href="galeria.html" class="ver-mas">Ver galería completa</a>
+  <!-- FIN GALERIA DE IMAGENES CON POPUP -->
+
 </section>
+
+<!-- Contenedor del visor de imagen -->
+<div id="image-viewer" class="image-viewer">
+  <div class="image-viewer-content">
+      <span class="close-viewer">&times;</span>
+      <img id="viewer-image" src="" alt="Visor de imagen">
+  </div>
+</div>
+
+<!-- FIN SECCION GALERIA DE IMAGENES -->
 
 <section class="section--niveles-educativos">
   <h2>Niveles Educativos</h2>
@@ -145,17 +190,15 @@
     </article>
   </div>
   <a href="solicitud-evaluacion.html" class="boton--solicitud-evaluacion">SOLICITA EVALUACIÓN FONOAUDIOLÓGICA</a>
-  
+
   <div class="caracteristicas-container">
-    <div class="caracteristica"><span class="icono">&#9679;</span> Ambas jornadas</div>
+    <div class="caracteristica"><span class="icono">&#9679;</span> Jornada mañana - Jornada tarde</div>
     <div class="caracteristica"><span class="icono">&#9679;</span> Atención personalizada</div>
     <div class="caracteristica"><span class="icono">&#9679;</span> Atención fonoaudiológica</div>
     <div class="caracteristica"><span class="icono">&#9679;</span> Profesoras especialistas y asistentes por aula</div>
-    <div class="caracteristica"><span class="icono">&#9679;</span> Ubicación zona de seguridad</div>
-    <div class="caracteristica"><span class="icono">&#9679;</span> Zona de juegos infantiles</div>
-    <div class="caracteristica"><span class="icono">&#9679;</span> Taller de apoyo pedagógico y emocional</div>
+    <div class="caracteristica"><span class="icono">&#9679;</span> Ubicación en zona de seguridad</div>
+    <div class="caracteristica"><span class="icono">&#9679;</span> Buzo y delantal</div>
   </div>
-  
 </section>
 
 
