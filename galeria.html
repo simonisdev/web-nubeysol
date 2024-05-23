@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <title>Galer&iacute;a de fotos - Escuela de Lenguaje Nube y Sol</title>
   <link rel="stylesheet" type="text/css" href="fmobile.css">
+  <link rel="stylesheet" type="text/css" href="galeria.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -27,54 +33,34 @@
   </div>
 </header>
 
-<div>
-    <h1 class="titulo-pagina">GALER&Iacute;A DE FOTOS</h1>
-</div>
-
-<section id="galeria">
-  <h2>Recuerdos de nuestra escuela de lenguaje Nube y Sol</h2>
-  <div class="imagenes">
-    <!-- Insertar imágenes aquí -->
-    <!-- <img class="item-imagen" src="img/en la sala - visita cuidado dientes.jpeg" alt="Descripción de la imagen"> -->
-    <!-- <img class="item-imagen" src="img/las tias en el parque.jpeg" alt="Descripción de la imagen"> -->
-    <!-- Más imágenes -->
-  </div>
-</section>
-
-<div class="gallery">
-  <div class="image-container">
-    <img class="item-imagen" src="img/las tias en el parque.jpeg" alt="Equipo Nube y sol">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/en la sala - visita cuidado dientes.jpeg" alt="visita cuidado dientes">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/jardin tia mayo.jpeg" alt="Image 1">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/dia de la familia 2023.jpeg" alt="Image 2">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/buscandoiguales.jpeg" alt="Image 3">
+  <!-- <div>
+      <h1 class="titulo-pagina">GALER&Iacute;A DE FOTOS</h1>
+  </div> -->
+  
+  <!-- <section id="galeria">
+    <h2 class="titulo-pagina">Recuerdos de nuestra escuela de lenguaje Nube y Sol</h2>
+  
+    <div class="imagenes">
+    </div>
+  </section> -->
+  
+  <div class="container">
+    <h2 class="text-center">GALER&Iacute;A DE FOTOS</h2>
+    <div class="lightbox-gallery">
+        <div><img src="img/dia de la familia 2023 - foto 2.jpeg" data-image-hd="img/dia de la familia 2023 - foto 2.jpeg" alt="D&iacute;a de la familia (2023)"></div>
+        <div><img src="img/en la sala - visita cuidado dientes.jpeg" data-image-hd="img/en la sala - visita cuidado dientes.jpeg" alt="Cuidado de nuestros dientes, visita en sala."></div>
+        <div><img src="img/jardin tia mayo.jpeg" data-image-hd="img/jardin tia mayo.jpeg" alt="Celebrando con la t&iacute;a Mayo"></div>
+        <div><img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" data-image-hd="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="En el patio"></div>
+        <div><img src="img/dia de la familia 2023.jpeg" data-image-hd="img/dia de la familia 2023.jpeg" alt="D&iacute;a de la familia (2023)"></div>
+        <div><img src="img/las tias traje tipico nortino.jpeg" data-image-hd="img/las tias traje tipico nortino.jpeg" alt="D&iacute;a de la cultura nortina"></div>
+    </div>
   </div>
   
-  <div class="image-container">
-    <img class="image" src="img/en el patio con los bomberos.jpeg" alt="Escuela Nube y Sol">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/las tias traje tipico nortino.jpeg" alt="Escuela Nube y Sol">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/las tias.jpeg" alt="Escuela Nube y Sol">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/nube_y_sol_todos_en_el_patio.jpeg" alt="Escuela Nube y Sol">
-  </div>
-  <div class="image-container">
-    <img class="image" src="img/logo_escuela_nube_y_sol.png" alt="Escuela Nube y Sol">
-  </div>
-
-</div>
+  <!-- <div class="text-center github-link">
+  
+  <a class="github-link" href="https://github.com/humbl3man/lightboxify" target="_blank"><i class="fa fa-github"></i> Github Source Code</a>
+  
+  </div> -->
 
 <footer>
   <div class="footer-content">
@@ -99,6 +85,7 @@
 </footer>
 
 <script src="script.js"></script>
+<!-- <script src="galeria.js"></script> -->
 
 
 
