@@ -1,4 +1,5 @@
-    // Create a lightbox
+// $('.lightbox').lightboxify();
+// Create a lightbox
 (function() {
   var $lightbox = $("<div class='lightbox'></div>");
   var $img = $("<img>");
