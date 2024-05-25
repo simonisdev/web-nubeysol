@@ -11,6 +11,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: #07e186;
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
   /* color: #333; */
@@ -361,7 +362,7 @@ width: 50%;
 /* SECCION GALERIA DE IMAGENES (home) */
 .galeria {
   padding: 0;
-  background-color: rgba(255, 162, 0, .5);
+  background-color: rgb(253, 202, 114);
   border-radius: 15px 15px 0 0;
   margin-top: -15px;
 }
@@ -475,7 +476,7 @@ width: 50%;
 /* SECCIÓN FOOTER */
 footer {
   background-color: #f8f9fa;
-  bottom: 0;
+  margin-bottom: 0;
   left: 0;
   width: 100%;
   color: #fff;
@@ -489,11 +490,20 @@ footer {
   justify-content: center;
   background-color: #007bff;
   height: 100px;
+  color: #fff;
+  padding-top: 15px;
+}
+.contact-info-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 30px;
 }
 
 .contenedor-redes {
   display: flex;
-  height: 10vh;
+  /* height: 10vh; */
   flex-direction: row;
   justify-content: center;
   align-items: self-end;
@@ -791,8 +801,12 @@ width: 25px;
     flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
   }
 
+  /* FOOTER */
+  .contact-info-footer {
+    flex-direction: row;
+  }
   .contenedor-redes {
-    display: flex;
+    height: auto;
 }
 
 .link-contacto {
