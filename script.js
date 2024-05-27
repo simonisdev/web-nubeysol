@@ -1,23 +1,3 @@
-    // FOOTER
-  //   document.addEventListener('DOMContentLoaded', function() {
-  //     fetch('footer.html')
-  //        .then(response => response.text())
-  //        .then(data => {
-  //             document.body.innerHTML += data;
-  //         })
-  //        .catch(error => console.error('Error al cargar el menú:', error));
-  // });
-  
-// menu
-// document.addEventListener('DOMContentLoaded', function() {
-//   fetch('menu.html')
-//      .then(response => response.text())
-//      .then(data => {
-//           document.body.innerHTML += data;
-//       })
-//      .catch(error => console.error('Error al cargar el menú:', error));
-// });
-
 // menú toggle
 document.addEventListener('DOMContentLoaded', function() {
   const botonMenu = document.querySelector('.menu-toggle');
@@ -55,7 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(cambiarAnuncio, 5000);
   });
   
-  
+// FOOTER
+// window.onload = function() {
+//   fetch('footer.html')
+//      .then(response => response.text())
+//      .then(data => {
+//           document.body.innerHTML += data;
+//       })
+//      .catch(error => console.error('Error al cargar el menú:', error));
+// };  
 
 //   calendario escolar
 document.addEventListener('DOMContentLoaded', function() {
