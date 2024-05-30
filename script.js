@@ -163,3 +163,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     
     }());
+
+
+    $(document).ready(function(){
+      // Mostrar el botón cuando el usuario se desplace más de 300px hacia abajo
+      $(window).scroll(function(){
+          if ($(this).scrollTop() > 300){
+              $('.scroll-top').fadeIn('slow');
+          } else {
+              $('.scroll-top').fadeOut('slow');
+          }
+      });
+  
+      // Acción del botón para volver al inicio de la página
+      $('.scroll-top').click(function(event){
+          event.preventDefault();
+          $('html, body').animate({scrollTop: 0}, 500);
+      });
+  });
+  

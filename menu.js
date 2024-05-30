@@ -7,8 +7,9 @@
 //        .catch(error => console.error('Error al cargar el menú:', error));
 // });
 
+// MENU TEMPLATE
   document.addEventListener('DOMContentLoaded', function() {
-      var template = document.getElementById('menuNavegacion').content;
-      var fragmento = document.importNode(template, true);
-      document.body.appendChild(fragmento);
+       var template = document.getElementById('menuNavegacion').content;
+       var fragmento = document.importNode(template, true);
+       document.body.appendChild(fragmento);
   });

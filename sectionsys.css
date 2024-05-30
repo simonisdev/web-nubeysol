@@ -1,0 +1,8 @@
+ /* Estilos básicos */
+ section {
+    display: none; /* Oculta todas las secciones por defecto */
+    /* margin-top: 20px; */
+}
+.active {
+    display: block; /* Muestra la sección activa */
+}
