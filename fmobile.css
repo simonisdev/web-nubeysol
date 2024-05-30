@@ -357,6 +357,12 @@ width: 50%;
 .popup-option.active {
   display: block;
 }
+.mensaje-director-container {
+  display: flex;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
 /* fin del mensaje del director */
 
 /* SECCIÓN CALENDARIO ESCOLAR */
@@ -761,6 +767,24 @@ width: 25px;
   padding-bottom: 30px;
 }
 
+/* Boton volver arriba */
+.scroll-top {
+  color: #fff;
+  display: none; /* Inicialmente oculto */
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
   /* Ajustes para pantallas más grandes con Media Queries */
 @media (min-width: 768px) {
     /* body {
@@ -898,6 +922,9 @@ width: 25px;
     flex-direction: row;
     justify-content: space-between;
   }
+  .mensaje-director-container {
+    padding-left: 15px;
+  }
   /* fin popup mensaje del director */
 
 /* SECCION GALERIA DE IMAGENES (home) */
@@ -1005,22 +1032,7 @@ margin-bottom: 10px;
   height: 50vh;
 }
 
-.scroll-top {
-  color: #fff;
-  display: none; /* Inicialmente oculto */
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  z-index: 1000;
-  bottom: 20px;
-  right: 20px;
-  font-size: 18px;
-  background: #333;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  cursor: pointer;
-}
+/* Boton volver arriba */
 
 }
 

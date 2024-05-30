@@ -113,7 +113,7 @@
         <div class="sobre-nosotros--container1">
           <!-- <h2>Sobre Nosotros</h2> -->
           <p>Descubre quiénes somos y cómo fomentamos el desarrollo integral de nuestros estudiantes en Nube y Sol.</p>
-          <a href="nosotros.html">
+          <a href="#" onclick="mostrarSeccion('main-container--nosotros-page')">
             <h3><br>Te contamos sobre Nuestra Misi&oacute;n y Visi&oacute;n</h3>
           </a>
           <!-- <div class="contenido">
@@ -123,7 +123,7 @@
         <div class="sobre-nosotros--container2">
           <img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="" class="img-nosotros">
           <div class="mensaje-director">
-            <h4>"Mensaje del Director"</h4>
+            <h4>"Mensaje de la Directora"</h4>
             <!-- <p>[Mensaje del director]</p> -->
           </div>
         </div>
@@ -136,7 +136,27 @@
           <div id="popup-option1" class="popup-option">
             <img src="img/personal/VivianCarvajal_fondoBlanco.jpg" alt="Director">
             <!-- <p>Este es el texto del mensaje del Director.</p> -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis pariatur repudiandae iste ipsa rem, esse fugiat quos, vero debitis saepe quod magnam? Rem, possimus praesentium est mollitia minus commodi provident.</p>
+            <div class="mensaje-director-container">
+              <p>
+                <strong>¡Bienvenidos a la Escuela Especial de Lenguaje "Nube y Sol"!</strong><br><br>
+                Gracias por visitar nuestra página y por su interés en conocer nuestra escuela y proyecto educativo. En "Nube y Sol", estamos comprometidos con brindar una educación inclusiva y de calidad para todos nuestros estudiantes.<br><br>
+                Exploren nuestro sitio para obtener más información y no duden en contactarnos para cualquier consulta.<br><br>
+                Atentamente,<br><br>
+                Vivian Carvajal.<br>Directora.
+              </p>
+            </div>
+            <!-- <div class="mensaje-director-container">
+              <p>¡Bienvenidos a la Escuela Especial de Lenguaje "Nube y Sol"!
+                <br>
+                <br>
+                Me complace saludarlos y agradecerles por visitar nuestra página web. Su interés en conocer más sobre nuestra escuela y nuestro proyecto educativo es muy valioso para nosotros. En "Nube y Sol", estamos comprometidos con brindar una educación de calidad que promueva el desarrollo integral de nuestros estudiantes, apoyando sus necesidades específicas de lenguaje y fomentando un ambiente de aprendizaje inclusivo y enriquecedor.
+                <br>
+                <br>
+                A través de nuestro sitio web, esperamos ofrecerles una visión clara de nuestra misión, visión y valores, así como mantenerlos informados sobre nuestras actividades y eventos. Les invitamos a explorar todas las secciones y a mantenerse en contacto con nosotros para cualquier consulta o información adicional.
+                <br>
+                <br>
+                Gracias por ser parte de nuestra comunidad educativa. Juntos, continuaremos construyendo un futuro brillante para nuestros niños y niñas.</p>
+            </div> -->
           </div>
           <!-- <div id="popup-option2" class="popup-option">
               <video controls>
@@ -201,19 +221,19 @@
             <img src="img/dia de la familia 2023.jpeg" alt="Imagen 4">
         </div>
     </div>
-    <a href="galeria.html" class="ver-mas">Ver galería completa</a>
-      <!-- FIN GALERIA DE IMAGENES CON POPUP -->
-    
+    <a href="#" onclick="mostrarSeccion('main-container--galeria-page')" class="ver-mas">Ver galería completa</a>
+  </div>
+  
+  <!-- Contenedor del visor de imagen -->
+  <div id="image-viewer" class="image-viewer">
+    <div class="image-viewer-content">
+      <span class="close-viewer">&times;</span>
+      <img id="viewer-image" src="" alt="Visor de imagen">
     </div>
-    
-    <!-- Contenedor del visor de imagen -->
-    <div id="image-viewer" class="image-viewer">
-      <div class="image-viewer-content">
-          <span class="close-viewer">&times;</span>
-          <img id="viewer-image" src="" alt="Visor de imagen">
-      </div>
-    </div>
+  </div>
 </section>
+<!-- FIN GALERIA DE IMAGENES CON POPUP -->
+
 <!-- FIN PAGINA HOME -->
 
 <!-- PAGINA SOBRE NOSOTROS -->
@@ -468,26 +488,25 @@
 
     <script>
            function mostrarSeccion(id) {
-    // Si hay un parámetro, cambia la sección activa según el ID proporcionado
-    if (id) {
-        // Oculta todas las secciones
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
+              // Si hay un parámetro, cambia la sección activa según el ID proporcionado
+              if (id) {
+                  // Oculta todas las secciones
+                  const sections = document.querySelectorAll('section');
+                  sections.forEach(section => {
+                      section.classList.remove('active');
+                  });
 
-        // Muestra la sección seleccionada
-        document.getElementById(id).classList.add('active');
-    } else {
-        // Si no hay parámetro, muestra la sección home por defecto
-        document.getElementById('main-container--home-page').classList.add('active');
-    }
-}
-
-// Llama a mostrarSeccion sin parámetros al cargar la página para activar la sección home
-window.onload = function() {
-    mostrarSeccion();
-};
+                  // Muestra la sección seleccionada
+                  document.getElementById(id).classList.add('active');
+              } else {
+                  // Si no hay parámetro, muestra la sección home por defecto
+                  document.getElementById('main-container--home-page').classList.add('active');
+              }
+            }
+            // Llama a mostrarSeccion sin parámetros al cargar la página para activar la sección home
+            window.onload = function() {
+              mostrarSeccion();
+            };
     </script>
     <script src="galeria.js"></script>
     <script src="script.js"></script>
