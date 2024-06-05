@@ -181,4 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
           $('html, body').animate({scrollTop: 0}, 500);
       });
   });
-  
+
+  // FOOTER
+//   window.onload = function() {
+//     fetch('footer.html')
+//        .then(response => response.text())
+//        .then(data => {
+//             document.body.innerHTML += data;
+//         })
+//        .catch(error => console.error('Error al cargar el menú:', error));
+// };
+

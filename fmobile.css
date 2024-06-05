@@ -770,7 +770,8 @@ width: 25px;
 /* Boton volver arriba */
 .scroll-top {
   color: #fff;
-  display: none; /* Inicialmente oculto */
+  /* Inicialmente oculto */
+  display: none;
   width: 40px;
   height: 40px;
   position: fixed;
