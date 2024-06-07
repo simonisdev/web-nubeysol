@@ -1,0 +1,15 @@
+Paleta 1
+
+azul #4AA2D9
+azul claro #99D9F2
+amarillo #D9CE32
+naranja #F2A950
+rojo #F24B4B
+
+Paleta 2
+
+#348ABF
+#0AADBF
+#84BF04
+#F2C12E
+#F29727

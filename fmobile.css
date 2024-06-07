@@ -1,6 +1,14 @@
 :root {
-  --azul-base: #007bff;
-  --amarillo-base: #ffff00;
+  /* --azul-base: #007bff; */
+  --azul-base:     #4AA2D9;
+  --amarillo-base: #D9CE32;
+  --azul-claro:    #99D9F2;
+  --naranja:       #F2A950;
+  --rojo:          #F24B4B;
+  --verde:         #07e186;
+  --amarillo:      #ffff00;
+  --texto-claro:   #fff;
+  --texto-oscuro:  #000;
 }
 * {
   box-sizing: border-box;
@@ -11,10 +19,8 @@ html {
   font-size: 62.5%;
 }
 body {
-  /* background-color: #fbfd5d; */
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
-  /* color: #333; */
 }
 /* Estilos Base para Móviles */
 body, h2, h3, p {
@@ -27,10 +33,12 @@ a {
 
  /* Estilos de secciones Active/ocultas */
  section {
-  display: none; /* Oculta todas las secciones por defecto */
+  display: none;
+    /* Oculta todas las secciones por defecto */
 }
 .active {
-  display: block; /* Muestra la sección activa */
+  display: block;
+    /* Muestra la sección activa */
 }
 
   .titulo-pagina {
@@ -46,7 +54,6 @@ a {
   background-color: var(--azul-base);
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px; */
 }
 .logo-header {
   height: 60px;
@@ -59,13 +66,12 @@ a {
   position: absolute;
   right: 0;
   top: 100%;
-  background-color: rgba(0, 123, 255, 0.9);
   width: 200px;
   z-index: 1000;
 }
 
 .cabecera nav ul {
-  text-align: right;
+  text-align: center;
   list-style: none;
   color: #fff;
   display: flex;
@@ -74,9 +80,16 @@ a {
 
 .cabecera nav ul li {
 padding: 5px 0;
-border-top: 1px solid #ffffff;
-border-bottom: 0.5px solid #ffff00;
+background-color: var(--azul-base);
+border-top: 0.5px solid #fff;
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
 }
+.cabecera nav ul li:last-child {
+  border-bottom: 1px solid #fff;
+  border-radius: 0 0 10px 10px;
+}
+
 /* .cabecera nav ul li:hover {
   color: #333;
   font-weight: 900;
@@ -152,9 +165,7 @@ width: 50%;
   color: #ffffff;
 }
 .boton-anuncio {
-  background-color: #007bff;
-  /* color: var(--amarillo-base); */
-  color: red;
+  background-color: var(--azul-base);
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
@@ -192,7 +203,9 @@ width: 50%;
 /* SECCION NIVELES EDUCATIVOS */
 .section--niveles-educativos {
   display: flex;
-  background-color: rgba(223, 228, 76, 0.883);
+  /* background-color: var(--amarillo-base); */
+  background-color: var(--verde);
+  /* background-color: rgba(223, 228, 76, 0.883); */
   /* background-image: url(img/provisional_img/patron-dibujos-infantiles.jpg); */
   flex-direction: column;
   justify-content: center;
@@ -204,6 +217,7 @@ width: 50%;
 .section--niveles-educativos h2 {
   text-align: center;
   font-size: 3rem;
+  color: var(--texto-claro);
 }
 .niveles-container-home {
   display: flex;
@@ -218,16 +232,14 @@ width: 50%;
   width: 250px;
   height: 250px;
   margin: 15px;
-  /* background-color: var(--amarillo-base); */
-  background-color: #07e186;
-  color: #fff;
+  background-color: var(--amarillo-base);
   border-radius: 20px 20px 0 0;
+  border-bottom: solid 3px var(--naranja);
 }
 .titulo-nivel {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   width: 120px;
   height: 120px;
   border-radius: 30%;
@@ -239,15 +251,18 @@ width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-family: "Quicksand", sans-serif; */
   font-size: 2rem;
   font-weight: 700;
-  background-color: #ffa200;
-  color: #fff;
+  background-color: var(--rojo);
+  color: var(--texto-claro);
   height: fit-content;
   width: 80%;
   padding: 15px;
+  border: dotted 3px var(--verde);
   border-radius: 15px;
+}
+.boton--solicitud-evaluacion:hover {
+  border: ridge 3px var(--verde);
 }
 
 /* lista de servicios adicionales */
@@ -263,6 +278,7 @@ width: 50%;
   /* Espaciado entre ítems */
   margin-bottom: 10px;
   font-weight: 900;
+  color: var(--texto-claro);
   text-shadow: 2px 2px 4px black, -2px -2px 4px white;
 }
 
@@ -292,7 +308,8 @@ width: 50%;
   text-align: center;
 }
 .sobre-nosotros--container1 h3 {
-  color: rgb(165, 42, 42);
+  color: var(--rojo);
+  /* color: rgb(165, 42, 42); */
 }
 
 .sobre-nosotros--container1 p {
@@ -304,10 +321,22 @@ width: 50%;
   border: solid 10px var(--azul-base);
   margin-top: 30px;
 }
-.sobre-nosotros .mensaje-director {
+.mensaje-director {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--amarillo-base);
+  min-height: 80px;
+  min-width: max-content;
+  padding: 20px;
+  border: groove 1px #000;
+  border-radius: 50% 50% 0;
+}
+.sobre-nosotros
+.mensaje-director {
   margin-top: 20px;
   font-style: oblique;
-  text-shadow: 2px 2px 4px black, -2px -2px 4px white;  
+  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
 }
 /* popup mensaje del director */
 /* Estilo del Popup */
@@ -448,13 +477,15 @@ width: 50%;
   transform: scale(1.05);
 }
 
+/* boton enlace para ver galeria completa */
 .ver-mas {
   display: block;
-  text-align: end;
+  text-align: center;
   padding: 10px;
   text-decoration: none;
-  color: #fff;
+  color: var(--texto-claro);
   font-weight: bold;
+  font-size: 2rem;
 }
 
 /* Estilo del visor de imagen */
@@ -823,11 +854,10 @@ width: 25px;
       flex-direction: row;
       margin: 0 25px 0 0;
     }
-    .cabecera nav ul li {
+    .cabecera nav ul li,
+    .cabecera nav ul li:last-child {
       border: none;
-      /* background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 10px 10px 0 0; */
-      margin-right: 5px;
+      /* margin-right: 5px; */
     }
     .cabecera nav ul li span {
       display: inline;
@@ -864,6 +894,29 @@ width: 25px;
       margin-top: 20px;
       position: absolute;
       width: 100%;
+    }
+/* sección niveles */
+    .niveles-container-home {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+  
+    .boton--solicitud-evaluacion {
+      /* width: fit-content; */
+      width: 100%;
+      padding: 15px 50px;
+      font-size: 3rem;
+    }
+  
+    .caracteristicas-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .caracteristica {
+      flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
     }
 
     .sobre-nosotros {
@@ -947,26 +1000,6 @@ width: 25px;
 
   .section--niveles-educativos {
     padding: 30px 100px;
-  }
-  .niveles-container-home {
-    flex-direction: row;
-    /* justify-content: space-evenly; */
-  }
-
-  .boton--solicitud-evaluacion {
-    width: fit-content;
-    padding: 15px 50px;
-    font-size: 3rem;
-  }
-
-  .caracteristicas-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .caracteristica {
-    flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
   }
 
   /* FOOTER */
