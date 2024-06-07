@@ -203,16 +203,13 @@ width: 50%;
 /* SECCION NIVELES EDUCATIVOS */
 .section--niveles-educativos {
   display: flex;
-  /* background-color: var(--amarillo-base); */
   background-color: var(--verde);
-  /* background-color: rgba(223, 228, 76, 0.883); */
-  /* background-image: url(img/provisional_img/patron-dibujos-infantiles.jpg); */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
   text-align: center;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 .section--niveles-educativos h2 {
   text-align: center;
@@ -273,13 +270,13 @@ width: 50%;
 }
 
 .caracteristica {
-  /* Asumiendo que quieras que ocupen toda la anchura en móviles */
+  /* ocupan toda la anchura en móviles */
   flex: 1 1 100%;
   /* Espaciado entre ítems */
   margin-bottom: 10px;
-  font-weight: 900;
+  /* font-weight: 900; */
   color: var(--texto-claro);
-  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
+  /* text-shadow: 2px 2px 4px black, -2px -2px 4px white; */
 }
 
 .icono {
@@ -290,8 +287,8 @@ width: 50%;
 .sobre-nosotros {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 35px 0;
+  /* height: 100vh; */
+  padding-top: 35px;
   background-color: #f0f0f0;
 }
 .sobre-nosotros--container2 {
@@ -309,7 +306,6 @@ width: 50%;
 }
 .sobre-nosotros--container1 h3 {
   color: var(--rojo);
-  /* color: rgb(165, 42, 42); */
 }
 
 .sobre-nosotros--container1 p {
@@ -318,25 +314,29 @@ width: 50%;
 .img-nosotros {
   width: 80%;
   border-radius: 50%;
-  border: solid 10px var(--azul-base);
-  margin-top: 30px;
+  border: groove 10px var(--azul-base);
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+  margin: 20px 0;
 }
 .mensaje-director {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--amarillo-base);
+  font-size: 2rem;
+  /* background-color: var(--amarillo-base); */
+  color: var(--texto-oscuro);
   min-height: 80px;
   min-width: max-content;
   padding: 20px;
-  border: groove 1px #000;
-  border-radius: 50% 50% 0;
+  /* border: groove 10px var(--verde); */
+  /* border-radius: 50% 50% 0; */
+  /* border-radius: 50%; */
 }
 .sobre-nosotros
 .mensaje-director {
   margin-top: 20px;
   font-style: oblique;
-  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
 }
 /* popup mensaje del director */
 /* Estilo del Popup */
@@ -391,43 +391,54 @@ width: 50%;
   font-size: 1.4rem;
   text-align: justify;
 }
-
 /* fin del mensaje del director */
 
 /* SECCIÓN CALENDARIO ESCOLAR */
 .calendario-escolar {
   display: flex;
   flex-direction: column;
-  background-color: #8AC6DB;
+  background-color: var(--azul-claro);
   height: 100vh;
   padding: 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 15px 15px 0 0;
 }
+.calendario {
+  width: 100%;
+}
+.calendario-escolar .calendario img {
+  width: 80vw;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.calendario-escolar 
+.calendario-intro {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
 .boton-calendario {
   border-radius: 10px;
   /* border: solid 1px #fff; */
   width: 200px;
+  margin-top: 20px;
+  text-align: center;
 }
 .calendario-escolar a {
   color: #fff;
 }
-.calendario-escolar .calendario-intro {
-  color: white;
-  margin-bottom: 20px;
-}
-.calendario-escolar .calendario img {
-  width: 80vw;
-}
+
 
 /* SECCION GALERIA DE IMAGENES (home) */
 .galeria {
   padding: 0;
   background-color: rgb(253, 202, 114);
-  border-radius: 15px 15px 0 0;
-  margin-top: -15px;
+  /* border-radius: 15px 15px 0 0;
+  margin-top: -15px; */
 }
 .galeria h2 {
   padding: 30px;
@@ -918,13 +929,13 @@ width: 25px;
     .caracteristica {
       flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
     }
-
+/* seccion Sobre Nosotros */
     .sobre-nosotros {
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      /* padding: 200px; */
-      height: 70vh;
+      /* height: 70vh; */
+      padding-top: 0;
     }
   .sobre-nosotros--container1,
   .sobre-nosotros--container2 {
@@ -934,10 +945,11 @@ width: 25px;
     align-items: center;
     padding: 0 50px;
   }
-  
+  .mensaje-director {
+    font-size: 2.5rem;
+  }
   .img-nosotros {
-      width: 50%;
-      /* margin-top: auto; */
+      width: 60%;
   }
 
     /* Calendario Escolar */
@@ -945,15 +957,17 @@ width: 25px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    height: 85vh;
+    padding: 0;
   }
   .calendario-escolar .calendario img {
-    width: 250px;
-
+    width: 60%;
   }
+
 
   /* esta imagen se esta usando en:  */
   .item-img-provisional {
-    width: 50%;
+    height: 50%;
   }
   /* .publicacion-fb {
     display: flex;
