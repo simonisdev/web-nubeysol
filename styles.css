@@ -1,0 +1,1077 @@
+:root {
+  /* --azul-base: #007bff; */
+  --azul-base:     #4AA2D9;
+  --amarillo-base: #D9CE32;
+  --azul-claro:    #99D9F2;
+  --naranja:       #F2A950;
+  --rojo:          #F24B4B;
+  --verde:         #07e186;
+  --amarillo:      #ffff00;
+  --texto-claro:   #fff;
+  --texto-oscuro:  #000;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+/* Estilos Base para Móviles */
+body, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+a {
+    text-decoration: none;
+  }
+
+ /* Estilos de secciones Active/ocultas */
+ section {
+  display: none;
+    /* Oculta todas las secciones por defecto */
+}
+.active {
+  display: block;
+    /* Muestra la sección activa */
+}
+
+  .titulo-pagina {
+    text-align: center;
+}
+/* .top-spacer {
+  display: none;
+} */
+  /* Estilos para la cabecera */
+.cabecera {
+  display: flex;
+  position: relative;
+  background-color: var(--azul-base);
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-header {
+  height: 60px;
+  margin: 5px 0 5px 30px;
+}
+
+/* Estilos para el menu de navegación */
+.cabecera nav {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  z-index: 1000;
+}
+
+.cabecera nav ul {
+  text-align: center;
+  list-style: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera nav ul li {
+padding: 5px 0;
+background-color: var(--azul-base);
+border-top: 0.5px solid #fff;
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
+}
+.cabecera nav ul li:last-child {
+  border-bottom: 1px solid #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+/* .cabecera nav ul li:hover {
+  color: #333;
+  font-weight: 900;
+  text-shadow: #07e186;
+} */
+.menu-item a:hover {
+  color: var(--amarillo-base);
+  font-weight: 900;
+  text-shadow: #fff;
+}
+
+.cabecera nav ul li span {
+  display: none;
+}
+.cabecera  nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  /* border: solid 2px; */
+  font-size: 1.3rem;
+  margin: 5px 5px;
+  padding: 5px;
+  height: 20px;
+}
+/* Estilo para el botón de menú hamburguesa */
+.menu-toggle {
+background: none;
+border: none;
+color: #fff;
+/* font-size: 35px; */
+cursor: pointer;
+display: block;
+right: 20px;
+top: 10px;
+margin-right: 30px;
+}
+
+/* Mostrar menú cuando esté activo */
+.cabecera.nav-active nav {
+display: block;
+flex-direction: column;
+align-items: flex-start;
+width: 50%;
+}
+
+/* SECCIÓN ANUNCIOS */
+.slider {
+  overflow: hidden;
+}
+.anuncio {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  min-height: 200px;
+}
+.anuncio h2,
+.anuncio p {
+  background-color: rgba(0,0,0,0.5);
+}
+.anuncio h2 {
+  font-size: 3.5rem;
+  /* margin: 0; */
+  padding: 20px;
+  /* margin-top: 20%; */
+}
+.anuncio p {
+  padding: 20px 0;
+}
+.anuncio a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.boton-anuncio {
+  background-color: var(--azul-base);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.anuncio1,
+.anuncio2,
+.anuncio3,
+.anuncio4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+}
+.anuncio1 {
+  background-image: url('img/nube_y_sol_todos_en_el_patio.jpeg');
+}
+.anuncio2 {
+  background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
+}
+.anuncio3 {
+  background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
+}
+.anuncio4 {
+  background-image: url('img/fondo_escuela_feliz.jpeg');
+}
+
+.item-imagen {
+  height: 30vh;
+  width: auto;
+}
+
+/* SECCION NIVELES EDUCATIVOS */
+.section--niveles-educativos {
+  display: flex;
+  /* background-color: var(--amarillo-base); */
+  background-color: var(--verde);
+  /* background-color: rgba(223, 228, 76, 0.883); */
+  /* background-image: url(img/provisional_img/patron-dibujos-infantiles.jpg); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  text-align: center;
+  border-radius: 15px;
+}
+.section--niveles-educativos h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--texto-claro);
+}
+.niveles-container-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  background-color: var(--amarillo-base);
+  border-radius: 20px 20px 0 0;
+  border-bottom: solid 3px var(--naranja);
+}
+.titulo-nivel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 30%;
+  border: solid 4px #fff;
+  color: #fff;
+  background-color: var(--azul-base);
+}
+.boton--solicitud-evaluacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: var(--rojo);
+  color: var(--texto-claro);
+  height: fit-content;
+  width: 80%;
+  padding: 15px;
+  border: dotted 3px var(--verde);
+  border-radius: 15px;
+}
+.boton--solicitud-evaluacion:hover {
+  border: ridge 3px var(--verde);
+}
+
+/* lista de servicios adicionales */
+.caracteristicas-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.caracteristica {
+  /* Asumiendo que quieras que ocupen toda la anchura en móviles */
+  flex: 1 1 100%;
+  /* Espaciado entre ítems */
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: var(--texto-claro);
+  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
+}
+
+.icono {
+  margin-right: 10px; /* Espaciado entre el icono y el texto */
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+.sobre-nosotros {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 35px 0;
+  background-color: #f0f0f0;
+}
+.sobre-nosotros--container2 {
+  cursor: pointer;
+}
+.sobre-nosotros--container1,
+.sobre-nosotros--container2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+.sobre-nosotros--container1 h2 {
+  text-align: center;
+}
+.sobre-nosotros--container1 h3 {
+  color: var(--rojo);
+  /* color: rgb(165, 42, 42); */
+}
+
+.sobre-nosotros--container1 p {
+  font-style: italic;
+}
+.img-nosotros {
+  width: 80%;
+  border-radius: 50%;
+  border: solid 10px var(--azul-base);
+  margin-top: 30px;
+}
+.mensaje-director {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--amarillo-base);
+  min-height: 80px;
+  min-width: max-content;
+  padding: 20px;
+  border: groove 1px #000;
+  border-radius: 50% 50% 0;
+}
+.sobre-nosotros
+.mensaje-director {
+  margin-top: 20px;
+  font-style: oblique;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px white;
+}
+/* popup mensaje del director */
+/* Estilo del Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-option {
+  display: none;
+}
+.popup-option img {
+  height: 200px;
+}
+
+.popup-option.active {
+  display: block;
+}
+.mensaje-director-container {
+  display: flex;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+/* fin del mensaje del director */
+
+/* SECCIÓN CALENDARIO ESCOLAR */
+.calendario-escolar {
+  display: flex;
+  flex-direction: column;
+  background-color: #8AC6DB;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 15px 0 0;
+}
+.boton-calendario {
+  border-radius: 10px;
+  /* border: solid 1px #fff; */
+  width: 200px;
+}
+.calendario-escolar a {
+  color: #fff;
+}
+.calendario-escolar .calendario-intro {
+  color: white;
+  margin-bottom: 20px;
+}
+.calendario-escolar .calendario img {
+  width: 80vw;
+}
+
+/* SECCION GALERIA DE IMAGENES (home) */
+.galeria {
+  padding: 0;
+  background-color: rgb(253, 202, 114);
+  border-radius: 15px 15px 0 0;
+  margin-top: -15px;
+}
+.galeria h2 {
+  padding: 30px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: rgba(150, 150, 150, 0.5);
+  padding: 20px 4px;
+}
+.image-container {
+  display: flex;
+  margin: 2px;
+}
+
+.item-imagen {
+  height: 50vh;
+  width: 80vw;
+  object-fit: cover;
+  padding: 10px 2px;
+}
+
+/* GALERIA DE IMAGENES CON POPUP (Home > 768px)*/
+/* Estilo de la galería de imágenes */
+.galeria-container {
+  display: none;
+}
+.galeria-item {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.galeria-item img {
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+/* boton enlace para ver galeria completa */
+.ver-mas {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--texto-claro);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Estilo del visor de imagen */
+.image-viewer {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-viewer-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+.close-viewer {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-viewer:hover,
+.close-viewer:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#viewer-image {
+  width: 100%;
+  height: auto;
+}
+/* FIN GALERIA DE IMAGENES CON POPUP */
+
+/* Pie de página */
+/* OBJECT FOOTER */
+.menu-ext-container,
+.footer-ext-container {
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  /* margin: 0; */
+}
+
+/* SECCIÓN FOOTER */
+footer {
+  background-color: #f8f9fa;
+  margin-bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  height: 100%;
+  /* width: 100%; */
+  color: #fff;
+  padding-top: 15px;
+}
+.contact-info-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px 30px;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.contact-info-footer p {
+  padding: 15px;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  background-color: rgba(170, 170, 170, 0.613);
+}
+.contact-info-footer p br {
+  display: none;
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: self-end;
+  /* position: fixed; */
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 0;
+}
+
+.link-contacto {
+  display: block;
+  margin: 0 10px;
+}
+.link-contacto img {
+width: 25px;
+}
+
+.link-contacto:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.copyright-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background-color: #333;
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 100;
+    a {
+      color: #007bff;
+      list-style: none;
+    };
+}
+
+.mapa-container iframe {
+  height: 200px;
+  width: 100%;
+}
+
+/* Pagina CALENDARIO */
+.iframe-calendario {
+  height: 100vh;
+  width: 100%;
+}
+.publicacion-fb {
+  display: flex;
+  justify-content: center;
+  background-color: #007bff;
+}
+.img-provisional {
+  text-align: center;
+  /* background-color: var(--amarillo-base); */
+}
+.img-provisional h1 {
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  text-align: center;
+  color: rgb(110, 110, 110);
+}
+.item-img-provisional {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.publicacion-ig,
+.publicacion-fb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.publicacion-fb h3 {
+  margin: 20px 0;
+}
+.publicacion-fb iframe {
+  max-width: 95vw;
+}
+
+  /* PAGINA EQUIPO PROFESIONAL */
+.galeria-team {
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    background-color: var(--azul-base);
+    padding-top: 20px;
+}
+.titulo-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* background-color: var(--azul-base); */
+  /* color: #fff; */
+}
+.galeria-team-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  color: #fff;
+}
+.galeria-team .galeria-team-item img {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.galeria-team-item label span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* PAGINA NOSOTROS */
+.main-documentos,
+.main-nosotros {
+  padding: 30px;
+  padding-bottom: 50px;
+  }
+  .main-nosotros h1,
+  .main-nosotros h2,
+  .main-nosotros h3 {
+    text-align: center;
+  }
+  .main-nosotros h2 {
+    margin: 30px 0;
+  }
+  .main-nosotros p {
+    text-align: justify;
+  }
+  .sellos--container,
+  .infraestructura--container,
+  .planes-trabajo--container,
+  .metodologia-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+/* .sellos--container, */
+.sellos--container-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .infraestructura--container h2,
+.sellos--container h2 {
+  text-transform: capitalize;
+  margin: 30px 0;
+} */
+.sello-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffa200;
+  height: 250px;
+  width: 250px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50%;
+  /* font-size: 1.2rem; */
+}
+.planes-trabajo--container-items,
+.metodologia-container-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.planes-trabajo-item {
+  background-color: #07e186;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 10px;
+}
+.metodologia-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  background-color: rgb(250, 190, 200);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* PAGINA GALERIA DE FOTOS */
+#main-container--galeria-page {
+  background-color: #3bb2b8;
+  background: linear-gradient(
+    25deg,
+    rgba(66, 230, 149, 1),
+    rgba(66, 32, 149, 1)
+  );
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  font-family: "Quicksand", sans-serif;
+  margin-top: -114px;
+  padding-top: 114px;
+  padding-bottom: 30px;
+}
+
+/* Boton volver arriba */
+.scroll-top {
+  color: #fff;
+  /* Inicialmente oculto */
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+  /* Ajustes para pantallas más grandes con Media Queries */
+@media (min-width: 768px) {
+    /* body {
+      padding-top: 120px;
+    } */
+
+    .cabecera {
+      /* padding: 10px 40px; */
+      /* estilos cabecera fija */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+    }
+    .logo-header {
+      height: 100px;
+      margin-left: 40px;
+    }
+    .cabecera nav {
+      display: flex;
+      /* position. Restablece la posición en pantallas grandes */
+      position: static;
+      border: none;
+      /* background-color. Restablece el fondo en pantallas grandes */
+      background-color: transparent;
+      /* width. Restablece el ancho en pantallas grandes */
+      width: auto;
+      /* height: 120px; */
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .cabecera nav ul {
+      flex-direction: row;
+      margin: 0 25px 0 0;
+    }
+    .cabecera nav ul li,
+    .cabecera nav ul li:last-child {
+      border: none;
+      /* margin-right: 5px; */
+    }
+    .cabecera nav ul li span {
+      display: inline;
+      color: var(--amarillo-base);
+      margin: 0 5px;
+      font-size: 1rem;
+    }
+    /* .cabecera  nav ul li a {
+      color: #fff;
+      font-size: 1.5rem;
+    } */
+
+    .top-spacer {
+      height: 114px;
+    }
+
+    /* SECCION ANUNCIOS */
+    .slider {
+      position: relative;
+      /* margin-top: 120px; */
+    }
+    .anuncio {
+      height: 80vh;
+      position: relative;
+      padding: 0;
+    }
+    .anuncio3 {
+      background-position-y: 25%;
+    }
+    .anuncio p {
+      padding: 20px 0;
+    }
+    .boton-anuncio a {
+      margin-top: 20px;
+      position: absolute;
+      width: 100%;
+    }
+/* sección niveles */
+    .niveles-container-home {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+  
+    .boton--solicitud-evaluacion {
+      /* width: fit-content; */
+      width: 100%;
+      padding: 15px 50px;
+      font-size: 3rem;
+    }
+  
+    .caracteristicas-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .caracteristica {
+      flex: 1 1 30%; /* Aproximadamente un tercio del espacio total para desktop */
+    }
+
+    .sobre-nosotros {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      /* padding: 200px; */
+      height: 70vh;
+    }
+  .sobre-nosotros--container1,
+  .sobre-nosotros--container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+  }
+  
+  .img-nosotros {
+      width: 50%;
+      /* margin-top: auto; */
+  }
+
+    /* Calendario Escolar */
+  .calendario-escolar {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .calendario-escolar .calendario img {
+    width: 250px;
+
+  }
+
+  /* esta imagen se esta usando en:  */
+  .item-img-provisional {
+    width: 50%;
+  }
+  /* .publicacion-fb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .publicacion-fb h3 {
+    margin: 20px 0;
+  } */
+    /* Aquí puedes añadir más estilos específicos para pantallas grandes */
+
+  .galeria h2 {
+    font-size: 2rem;
+  }
+
+  /* popup mensaje del director */
+  .popup-option.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mensaje-director-container {
+    padding-left: 15px;
+  }
+  /* fin popup mensaje del director */
+
+/* SECCION GALERIA DE IMAGENES (home) */
+  .gallery {
+    display: none;
+  }
+
+  /* .galeria-container solo se muestra en pantallas > 768px */
+  .galeria-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .galeria-item img {
+    height: 75vh;
+    width: auto;
+  }
+
+  .section--niveles-educativos {
+    padding: 30px 100px;
+  }
+
+  /* FOOTER */
+  .contact-info-footer {
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
+  .contact-info-footer p br {
+    display: inline;
+  }
+  .contenedor-redes {
+    height: auto;
+}
+
+.link-contacto {
+    margin: 10px;
+}
+/* .copyright-style {
+  background-color: #fff;
+  color: #555;
+} */
+/* OTRAS PAGINAS */
+
+ /* PAGINA EQUIPO */
+ .galeria-team {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 20px 50px;
+}
+
+/* PAGINA CALENDARIO */
+
+/* PAGINA NOSOTROS */
+.main-nosotros {
+  padding: 0 150px;
+  padding-bottom: 50px;
+}
+.sellos--container-list {
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+  gap: 100px;
+}
+.sello-item {
+  flex-direction: column;
+}
+.planes-trabajo--container-items {
+  flex-direction: row;
+}
+.planes-trabajo-item {
+  flex-direction: row;
+}
+
+.metodologia-container-items {
+  flex-direction: row;
+}
+.planes-trabajo--container h2,
+.metodologia-container h2 {
+margin-bottom: 10px;
+}
+
+/* PAGINA DOCUMENTOS */
+.main-documentos {
+  height: 50vh;
+}
+
+/* Boton volver arriba */
+
+}
+
+@media (min-width: 1024px) {
+  .cabecera  nav ul li a {
+    font-size: 1.5rem;
+  } 
+}
