@@ -73,7 +73,7 @@ a {
 .cabecera nav ul {
   text-align: center;
   list-style: none;
-  color: #fff;
+  color: var(--texto-claro);
   display: flex;
   flex-direction: column;
 }
@@ -436,14 +436,12 @@ width: 50%;
 /* SECCION GALERIA DE IMAGENES (home) */
 .galeria {
   padding: 0;
-  background-color: rgb(253, 202, 114);
-  /* border-radius: 15px 15px 0 0;
-  margin-top: -15px; */
+  background-color: var(--naranja);
 }
 .galeria h2 {
   padding: 30px;
-  font-size: 1.5rem;
-  color: #fff;
+  font-size: 2.4rem;
+  color: var(--amarillo);
 }
 
 .gallery {
@@ -489,7 +487,7 @@ width: 50%;
 }
 
 /* boton enlace para ver galeria completa */
-.ver-mas {
+.ver-galeria {
   display: block;
   text-align: center;
   padding: 10px;
@@ -830,12 +828,7 @@ width: 25px;
 
   /* Ajustes para pantallas más grandes con Media Queries */
 @media (min-width: 768px) {
-    /* body {
-      padding-top: 120px;
-    } */
-
     .cabecera {
-      /* padding: 10px 40px; */
       /* estilos cabecera fija */
       position: fixed;
       top: 0;
@@ -963,12 +956,19 @@ width: 25px;
   .calendario-escolar .calendario img {
     width: 60%;
   }
-
+  .calendario-intro h2 {
+    font-size: 4rem;
+    color: var(--amarillo);
+  }
+  .boton-calendario {
+    width: 100%;
+  }
 
   /* esta imagen se esta usando en:  */
-  .item-img-provisional {
+  /* .item-img-provisional {
     height: 50%;
-  }
+  } */
+
   /* .publicacion-fb {
     display: flex;
     flex-direction: column;
