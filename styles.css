@@ -586,14 +586,12 @@ footer {
   justify-content: center;
   background-color: #007bff;
   height: 100%;
-  /* width: 100%; */
   color: #fff;
   padding-top: 15px;
 }
 .contact-info-footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 5px 30px;
@@ -616,6 +614,7 @@ footer {
 .contact-icon {
   width: 35px;
 }
+
 .contenedor-redes {
   display: flex;
   flex-direction: row;
@@ -1044,6 +1043,7 @@ width: 25px;
   .social-buttons {
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 30px;
   }
   .social-buttons a {
     margin: 0 10px;
@@ -1055,6 +1055,7 @@ width: 25px;
   .contact-info-footer {
     flex-direction: row;
     font-size: 1.5rem;
+    justify-content: space-around;
   }
   .contact-info-footer p br {
     display: inline;
@@ -1063,9 +1064,9 @@ width: 25px;
     height: auto;
 }
 
-.link-contacto {
+/* .link-contacto {
     margin: 10px;
-}
+} */
 /* .copyright-style {
   background-color: #fff;
   color: #555;
