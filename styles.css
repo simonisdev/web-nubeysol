@@ -441,7 +441,7 @@ width: 50%;
 .galeria h2 {
   padding: 30px;
   font-size: 2.4rem;
-  color: var(--amarillo);
+  color: var(--texto-claro);
 }
 
 .gallery {
