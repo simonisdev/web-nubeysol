@@ -151,6 +151,34 @@ width: 50%;
 .slider {
   overflow: hidden;
 }
+
+/* NUEVO SLIDER - CONTROLES DE NAVEGACION */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-prev, .slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+/* FIN NUEVO SLIDER */
+
 .anuncio {
   display: none;
   background-size: cover;
@@ -202,7 +230,7 @@ width: 50%;
   background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
 }
 .anuncio3 {
-  background-image: url('img/tias_traje_tipico_nortino_fy.jpg');
+  background-image: url('img/tias_traje_tipico_nortino_sf.png');
 }
 .anuncio4 {
   background-image: url('img/fondo_escuela_feliz.jpeg');

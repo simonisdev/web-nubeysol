@@ -36,31 +36,70 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 // slider anuncios
-document.addEventListener('DOMContentLoaded', function() {
-    let indiceActual = 0;
-    const anuncios = document.querySelectorAll('.slider .anuncio');
-    const totalAnuncios = anuncios.length;
+// document.addEventListener('DOMContentLoaded', function() {
+//     let indiceActual = 0;
+//     const anuncios = document.querySelectorAll('.slider .anuncio');
+//     const totalAnuncios = anuncios.length;
   
-    // Función para cambiar el anuncio visible
-    const cambiarAnuncio = () => {
+//     // Función para cambiar el anuncio visible
+//     const cambiarAnuncio = () => {
+//       // Ocultar el anuncio actual
+//       anuncios[indiceActual].style.display = 'none';
+  
+//       // Calcular el índice del próximo anuncio a mostrar
+//       indiceActual = (indiceActual + 1) % totalAnuncios;
+  
+//       // Mostrar el próximo anuncio
+//       anuncios[indiceActual].style.display = 'block';
+//     };
+  
+//     // Inicializar el slider mostrando el primer anuncio
+//     anuncios.forEach((anuncio, indice) => {
+//       anuncio.style.display = indice === 0 ? 'block' : 'none';
+//     });
+  
+//     // Cambiar el anuncio cada 5 segundos
+//     setInterval(cambiarAnuncio, 5000);
+//   });
+
+// NUEVO SLIDER
+document.addEventListener('DOMContentLoaded', function() {
+  let indiceActual = 0;
+  const anuncios = document.querySelectorAll('.slider .anuncio');
+  const totalAnuncios = anuncios.length;
+
+  // Función para cambiar el anuncio visible
+  const cambiarAnuncio = (nuevoIndice) => {
       // Ocultar el anuncio actual
       anuncios[indiceActual].style.display = 'none';
-  
-      // Calcular el índice del próximo anuncio a mostrar
-      indiceActual = (indiceActual + 1) % totalAnuncios;
-  
-      // Mostrar el próximo anuncio
+      
+      // Ajustar el índice del nuevo anuncio
+      indiceActual = (nuevoIndice + totalAnuncios) % totalAnuncios;
+      
+      // Mostrar el nuevo anuncio
       anuncios[indiceActual].style.display = 'block';
-    };
-  
-    // Inicializar el slider mostrando el primer anuncio
-    anuncios.forEach((anuncio, indice) => {
+  };
+
+  // Inicializar el slider mostrando el primer anuncio
+  anuncios.forEach((anuncio, indice) => {
       anuncio.style.display = indice === 0 ? 'block' : 'none';
-    });
-  
-    // Cambiar el anuncio cada 5 segundos
-    setInterval(cambiarAnuncio, 5000);
   });
+
+  // Cambiar el anuncio cada 5 segundos
+  const intervalo = setInterval(() => cambiarAnuncio(indiceActual + 1), 5000);
+
+  // Añadir eventos a los botones de navegación
+  document.querySelector('.slider-prev').addEventListener('click', () => {
+      clearInterval(intervalo); // Detener el intervalo automático
+      cambiarAnuncio(indiceActual - 1);
+  });
+
+  document.querySelector('.slider-next').addEventListener('click', () => {
+      clearInterval(intervalo); // Detener el intervalo automático
+      cambiarAnuncio(indiceActual + 1);
+  });
+});
+
   
 // FOOTER
 // window.onload = function() {
