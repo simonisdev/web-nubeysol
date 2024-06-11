@@ -8,6 +8,33 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   const botonMenu = document.querySelector('.menu-toggle');
+//   const menuDesplegable = document.querySelector('.menu-desplegable');
+//   const cabecera = document.querySelector('.cabecera');
+
+//   botonMenu.addEventListener('click', function() {
+//     // Toglear la clase 'nav-active' en la cabecera para mostrar/ocultar el menú desplegable
+//     cabecera.classList.toggle('nav-active');
+//     // Mostrar el menú desplegable si la cabecera tiene la clase 'nav-active'
+//     if (cabecera.classList.contains('nav-active')) {
+//       menuDesplegable.style.display = 'block'; // Asumiendo que quieres usar display para mostrar/ocultar
+//     } else {
+//       menuDesplegable.style.display = 'none';
+//     }
+//   });
+
+//   // Agregar evento de clic al documento para manejar clics fuera del menú
+//   document.addEventListener('click', function(event) {
+//     // Verificar si el clic fue fuera del menú desplegable
+//     if (!menuDesplegable.contains(event.target)) {
+//       // Si el clic fue fuera, ocultar el menú
+//       cabecera.classList.remove('nav-active');
+//       menuDesplegable.style.display = 'none';
+//     }
+//   });
+// });
+
 // slider anuncios
 document.addEventListener('DOMContentLoaded', function() {
     let indiceActual = 0;
