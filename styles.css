@@ -289,7 +289,8 @@ width: 50%;
   flex-direction: column;
   /* height: 100vh; */
   padding-top: 35px;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  background-color: #e4f967;
 }
 .sobre-nosotros--container2 {
   cursor: pointer;
@@ -435,8 +436,9 @@ width: 50%;
 
 /* SECCION GALERIA DE IMAGENES (home) */
 .galeria {
-  padding: 0 30px;
-  background-color: var(--naranja);
+  padding: 0 30px 10px;
+  /* background-color: var(--naranja); */
+  background-color: #333;
 }
 .galeria h2 {
   padding: 30px 0;
@@ -492,9 +494,13 @@ width: 50%;
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  color: var(--texto-claro);
+  color: var(--azul-base);
   font-weight: bold;
   font-size: 2rem;
+  /* background-color: #ffecb3; */
+  background-color: var(--verde);
+  border-radius: 5px;
+  margin: 25px 0;
 }
 
 /* Estilo del visor de imagen */
@@ -584,7 +590,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #007bff;
+  background-color: var(--azul-base);
   height: 100%;
   color: #fff;
   padding-top: 15px;
@@ -1034,6 +1040,9 @@ width: 25px;
   } */
     /* Aquí puedes añadir más estilos específicos para pantallas grandes */
 
+    .galeria {
+      padding-bottom: 40px;
+    }
   .galeria h2 {
     font-size: 2rem;
   }
