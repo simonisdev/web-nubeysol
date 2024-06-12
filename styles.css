@@ -21,6 +21,7 @@
   --font-pacifico: "Pacifico", cursive;
   --font-quicksand: "Quicksand", sans-serif;
   --font-rice: "Spicy Rice", serif;
+  --font-dancing: "Dancing Script", cursive;
 }
 * {
   box-sizing: border-box;
@@ -248,18 +249,15 @@ width: 50%;
 /* SECCION NIVELES EDUCATIVOS */
 .section--niveles-educativos {
   display: flex;
-  /* background-color: var(--verde); */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
   text-align: center;
-  /* border-radius: 15px; */
 }
 .section--niveles-educativos h2 {
   text-align: center;
   font-size: 3rem;
-  /* color: var(--texto-claro); */
 }
 .niveles-container-home {
   display: flex;
@@ -320,7 +318,6 @@ width: 50%;
   flex: 1 1 100%;
   /* Espaciado entre ítems */
   margin-bottom: 10px;
-  /* font-weight: 900; */
   color: var(--texto-oscuro);
   text-shadow: 2px 2px 4px black, -2px -2px 4px white;
 }
@@ -334,10 +331,9 @@ width: 50%;
 .sobre-nosotros {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
   padding-top: 35px;
-  /* background-color: #f0f0f0; */
-  background-color: #e4f967;
+  background-color: var(--azul-claro);
+  color: var(--texto-claro);
 }
 .sobre-nosotros--container2 {
   cursor: pointer;
@@ -357,34 +353,29 @@ width: 50%;
 }
 
 .sobre-nosotros--container1 p {
-  font-style: italic;
+  font-size: 1.8rem;
 }
 .img-nosotros {
   width: 80%;
   border-radius: 50%;
   border: groove 10px var(--azul-base);
-  /* margin-top: 30px;
-  margin-bottom: 30px; */
   margin: 20px 0;
 }
 .mensaje-director {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--azul-base);
+  font-family: var(--font-pacifico);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255), -2px -2px 4px white;
   font-size: 2rem;
-  /* background-color: var(--amarillo-base); */
-  color: var(--texto-oscuro);
   min-height: 80px;
   min-width: max-content;
-  padding: 20px;
-  /* border: groove 10px var(--verde); */
-  /* border-radius: 50% 50% 0; */
-  /* border-radius: 50%; */
 }
 .sobre-nosotros
 .mensaje-director {
   margin-top: 20px;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 /* popup mensaje del director */
 /* Estilo del Popup */
@@ -444,8 +435,8 @@ width: 50%;
 /* SECCIÓN CALENDARIO ESCOLAR */
 .calendario-escolar {
   display: flex;
-  flex-direction: column;
-  background-color: var(--azul-claro);
+  flex-direction: column-reverse;
+  /* background-color: var(--azul-claro); */
   height: 100vh;
   padding: 20px;
   text-align: center;
@@ -482,20 +473,22 @@ width: 50%;
   text-align: center;
 }
 .calendario-escolar a {
-  color: #fff;
+  color: var(--azul-base);
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 
 /* SECCION GALERIA DE IMAGENES (home) */
 .galeria {
   padding: 0 30px 10px;
-  /* background-color: var(--naranja); */
+  background-color: var(--azul-base);
   }
   .galeria h2 {
-  font-family: var(--font-rice);
+  font-family: var(--font-dancing);
   padding: 30px 0;
   font-size: 2.4rem;
-  color: var(--violeta);
+  color: var(--texto-claro);
 }
 
 .gallery {
@@ -505,7 +498,7 @@ width: 50%;
   overflow-x: auto;
   white-space: nowrap;
   padding: 20px 4px;
-  border: solid 12px var(--violeta);
+  border: solid 12px var(--amarillo-base);
   border-style: dotted;
   border-radius: 10px;
 }
@@ -552,7 +545,7 @@ width: 50%;
   color: var(--texto-claro);
   font-weight: bold;
   font-size: 2rem;
-  background-color: var(--violeta);
+  background-color: var(--amarillo-base);
   border-radius: 5px;
   margin: 25px 0;
 }
@@ -1035,6 +1028,7 @@ width: 25px;
       /* Aproximadamente un tercio del espacio total para desktop */
       flex: 1 1 33%;
     }
+    
 /* seccion Sobre Nosotros */
     .sobre-nosotros {
       flex-direction: row;
@@ -1053,9 +1047,27 @@ width: 25px;
   }
   .mensaje-director {
     font-size: 2.5rem;
+    padding: 20px;
+  }
+  .sobre-nosotros--container1 h3 {
+    border: solid 3px transparent;
+  }
+  .sobre-nosotros--container1 h3:hover {
+    color: var(--rojo);
+    border-bottom: solid 3px var(--texto-claro);
+  }
+  .sobre-nosotros--container1 p {
+    font-size: 2.6rem;
+    font-weight: 400;
   }
   .img-nosotros {
       width: 60%;
+  }
+  .mensaje-director {
+    text-shadow: 2px 2px 4px transparent, -2px -2px 4px transparent;
+  }
+  .mensaje-director:hover {
+    text-shadow: 2px 2px 5px white, -2px -2px 5px white;
   }
 
     /* Calendario Escolar */
@@ -1096,7 +1108,7 @@ width: 25px;
     padding-bottom: 40px;
   }
   .galeria h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   /* popup mensaje del director */
