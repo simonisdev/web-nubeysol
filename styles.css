@@ -931,6 +931,41 @@ width: 25px;
   cursor: pointer;
 }
 
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.cookie-banner p {
+  display: inline;
+  margin-right: 10px;
+}
+
+.cookie-banner a {
+  color: #ffa200;
+  text-decoration: underline;
+}
+
+.accept-cookies {
+  background-color: #ffa200;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.accept-cookies:hover {
+  background-color: #cc8400;
+}
+
+
   /* Ajustes para pantallas más grandes con Media Queries */
 @media (min-width: 768px) {
     .cabecera {

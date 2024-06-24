@@ -258,3 +258,18 @@ document.addEventListener('DOMContentLoaded', () => {
 //        .catch(error => console.error('Error al cargar el menú:', error));
 // };
 
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptCookiesButton = document.getElementById('accept-cookies');
+
+  // Verificar si el usuario ya aceptó las cookies
+  if (!localStorage.getItem('cookiesAccepted')) {
+      cookieBanner.style.display = 'block';
+  }
+
+  // Función para aceptar cookies
+  acceptCookiesButton.addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      cookieBanner.style.display = 'none';
+  });
+});
