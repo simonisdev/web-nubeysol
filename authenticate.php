@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$validUsername = 'admin';
-$validPassword = '123';
+$validUsername = 'calendario#nubeysol';
+$validPassword = 'calendario2024';
 
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
