@@ -1,0 +1,1075 @@
+/* styles.css */
+
+/* Fuentes */
+.permanent-marker-regular, .pacifico-regular {
+    font-family: "Permanent Marker", cursive, "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Variables de color y fuentes */
+:root {
+    --azul-base: #4AA2D9;
+    --amarillo-base: #D9CE32;
+    --azul-claro: #99D9F2;
+    --naranja: #F2A950;
+    --rojo: #F24B4B;
+    --verde: #07e186;
+    --amarillo: #ffff00;
+    --texto-claro: #fff;
+    --texto-oscuro: #000;
+    --violeta: #fa87fa;
+
+    --font-pacifico: "Pacifico", cursive;
+    --font-quicksand: "Quicksand", sans-serif;
+    --font-rice: "Spicy Rice", serif;
+    --font-dancing: "Dancing Script", cursive;
+}
+
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+    font-family: var(--font-quicksand);
+}
+
+/* Estilos base para móviles */
+body, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* Estilos de secciones active/ocultas */
+section {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+/* Estilos de cabecera */
+.cabecera {
+    display: flex;
+    position: relative;
+    background-color: var(--azul-base);
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-header {
+    height: 60px;
+    margin: 5px 0 5px 30px;
+}
+.cabecera nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    z-index: 1000;
+}
+.cabecera nav ul {
+    text-align: center;
+    list-style: none;
+    color: var(--texto-claro);
+    display: flex;
+    flex-direction: column;
+}
+.cabecera nav ul li {
+    padding: 5px 0;
+    background-color: var(--azul-base);
+    border-top: 0.5px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.cabecera nav ul li:last-child {
+    border-bottom: 1px solid #fff;
+    border-radius: 0 0 10px 10px;
+}
+.menu-item a:hover {
+    color: var(--amarillo-base);
+    font-weight: 900;
+    text-shadow: #fff;
+}
+.cabecera nav ul li span {
+    display: none;
+}
+.cabecera nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 5px 5px;
+    padding: 5px;
+    height: 20px;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    right: 20px;
+    top: 10px;
+    margin-right: 30px;
+}
+.cabecera.nav-active nav {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+/* SECCIÓN ANUNCIOS */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.slider-prev {
+    left: 10px;
+}
+.slider-next {
+    right: 10px;
+}
+.anuncio {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    min-height: 200px;
+}
+.anuncio h2, .anuncio p {
+    background-color: rgba(0,0,0,0.5);
+}
+.anuncio h2 {
+    font-size: 3.5rem;
+    padding: 20px;
+}
+.anuncio p {
+    padding: 20px 0;
+}
+.anuncio a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.boton-anuncio {
+    background-color: var(--azul-base);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: 700;
+}
+.anuncio1, .anuncio2, .anuncio3, .anuncio4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+.anuncio1 {
+    background-image: url('img/nube_y_sol_todos_en_el_patio.jpeg');
+}
+.anuncio2 {
+    background-image: url('img/dia\ de\ la\ familia\ 2023.jpeg');
+}
+.anuncio3 {
+    background-image: url('img/fondo_escuela_feliz.jpeg');
+}
+.item-imagen {
+    height: 30vh;
+    width: auto;
+}
+
+/* SECCION NIVELES EDUCATIVOS */
+.section--niveles-educativos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+.section--niveles-educativos h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.niveles-container-home {
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    background-color: var(--amarillo-base);
+    border-radius: 20px 20px 0 0;
+    border-bottom: solid 3px var(--naranja);
+}
+.titulo-nivel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    border: solid 4px #fff;
+    color: #fff;
+    background-color: var(--azul-base);
+}
+.boton--solicitud-evaluacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: var(--rojo);
+    color: var(--texto-claro);
+    height: fit-content;
+    width: 80%;
+    padding: 15px;
+    border: dotted 3px var(--verde);
+    border-radius: 15px;
+}
+.boton--solicitud-evaluacion:hover {
+    border: ridge 3px var(--verde);
+}
+
+/* lista de servicios adicionales */
+.caracteristicas-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.caracteristica {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    color: var(--texto-oscuro);
+    text-shadow: 2px 2px 4px black, -2px -2px 4px white;
+}
+.icono {
+    margin-right: 10px;
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+.sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    background-color: var(--azul-claro);
+    color: var(--texto-claro);
+}
+.sobre-nosotros--container2 {
+    cursor: pointer;
+}
+.sobre-nosotros--container1, .sobre-nosotros--container2 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+.sobre-nosotros--container1 h2 {
+    text-align: center;
+}
+.sobre-nosotros--container1 h3 {
+    color: var(--rojo);
+}
+.sobre-nosotros--container1 p {
+    font-size: 1.8rem;
+}
+.img-nosotros {
+    width: 80%;
+    border-radius: 50%;
+    border: groove 10px var(--azul-base);
+    margin: 20px 0;
+}
+.mensaje-director {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul-base);
+    font-family: var(--font-pacifico);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255), -2px -2px 4px white;
+    font-size: 2rem;
+    min-height: 80px;
+    min-width: max-content;
+}
+.sobre-nosotros .mensaje-director {
+    margin-top: 20px;
+}
+
+/* popup mensaje del director */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+}
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-button:hover, .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup-option {
+    display: none;
+}
+.popup-option img {
+    height: 200px;
+}
+.popup-option.active {
+    display: block;
+}
+.mensaje-director-container {
+    display: flex;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+/* SECCIÓN CALENDARIO ESCOLAR */
+.calendario-escolar {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.calendario {
+    width: 100%;
+}
+.calendario-escolar .calendario img {
+    width: 80vw;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.calendario-escolar .calendario-intro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.calendario-intro h2 {
+    font-family: var(--font-pacifico);
+    font-size: 3rem;
+    color: var(--amarillo-base);
+}
+.boton-calendario {
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+    text-align: center;
+}
+.calendario-escolar a {
+    color: var(--azul-base);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* SECCION GALERIA DE IMAGENES (home) */
+.galeria {
+    padding: 0 30px 10px;
+    background-color: var(--azul-base);
+}
+.galeria h2 {
+    font-family: var(--font-dancing);
+    padding: 30px 0;
+    font-size: 2.4rem;
+    color: var(--texto-claro);
+}
+.gallery {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 4px;
+    border: solid 12px var(--amarillo-base);
+    border-style: dotted;
+    border-radius: 10px;
+}
+.image-container {
+    display: flex;
+    border-radius: 10px;
+}
+.item-imagen {
+    height: 50vh;
+    width: 80vw;
+    object-fit: cover;
+}
+
+/* GALERIA DE IMAGENES CON POPUP (Home > 768px) */
+.galeria-container {
+    display: none;
+}
+.galeria-item {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.galeria-item img {
+    height: auto;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+.ver-galeria {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: var(--amarillo-base);
+    border-radius: 5px;
+    margin: 25px 0;
+}
+.image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.image-viewer-content {
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+.close-viewer {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-viewer:hover, .close-viewer:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+#viewer-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Pie de página */
+.menu-ext-container, .footer-ext-container {
+    width: 100%;
+    height: auto;
+    background-color: #333;
+}
+
+/* SECCIÓN FOOTER */
+footer {
+    background-color: #f8f9fa;
+    margin-bottom: 0;
+    padding-top: 35px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.social-section-title {
+    color: var(--azul-base);
+}
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.social-buttons a {
+    margin-bottom: 10px;
+}
+.social-buttons a img {
+    width: 40px;
+    margin-top: 15px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-base);
+    height: 100%;
+    color: #fff;
+    padding-top: 15px;
+}
+.contact-info-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px 30px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.contact-item a {
+    text-decoration: none;
+    color: var(--texto-claro);
+}
+.contact-info-footer p {
+    padding-bottom: 15px;
+}
+.contact-icon {
+    width: 35px;
+}
+.contenedor-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: self-end;
+    padding: 20px 0;
+}
+.link-contacto {
+    display: block;
+    margin: 0 10px;
+}
+.link-contacto img {
+    width: 25px;
+}
+.link-contacto:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.copyright-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #333;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: 100;
+    a {
+        color: #ffffff;
+        list-style: none;
+    }
+}
+.mapa-container iframe {
+    height: 200px;
+    width: 100%;
+}
+
+/* Pagina CALENDARIO */
+.titulo-pagina.titulo-pagina-calendario {
+    display: none;
+}
+.img-provisional {
+    text-align: center;
+}
+.img-provisional h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(110, 110, 110);
+}
+.item-img-provisional {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+/* PAGINA DOCUMENTOS INSTITUCIONALES */
+.pagina-documentos__intro {
+    text-align: justify;
+}
+.documentos-institucionales--container {
+    margin-top: 20px;
+}
+.documentos-institucionales--container ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.documentos-institucionales--container ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--amarillo-base);
+    width: 80%;
+    min-height: 60px;
+    height: fit-content;
+    margin: 5px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+.documentos-institucionales--container ul li:hover {
+    font-weight: 900;
+    background-color: var(--verde);
+}
+.documentos-institucionales--container ul li a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* PAGINA EQUIPO PROFESIONAL */
+.galeria-team {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    background-color: var(--azul-base);
+    padding-top: 20px;
+}
+.titulo-pagina-equipo {
+    background-color: var(--azul-base);
+    color: var(--texto-claro);
+}
+.galeria-team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    color: #fff;
+}
+.galeria-team .galeria-team-item img {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.galeria-team-item label span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* PAGINA NOSOTROS */
+.main-documentos, .main-nosotros {
+    padding: 30px;
+    padding-bottom: 50px;
+}
+.main-nosotros h1, .main-nosotros h2, .main-nosotros h3 {
+    text-align: center;
+}
+.main-nosotros h2 {
+    margin: 30px 0;
+}
+.main-nosotros p {
+    text-align: justify;
+}
+.sellos--container, .infraestructura--container, .planes-trabajo--container, .metodologia-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.sellos--container-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sello-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffa200;
+    height: 250px;
+    width: 250px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 50%;
+}
+.planes-trabajo--container-items, .metodologia-container-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.planes-trabajo-item {
+    background-color: #07e186;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px;
+}
+.metodologia-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    font-size: 1.5rem;
+    background-color: rgb(250, 190, 200);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* PAGINA GALERIA DE FOTOS */
+#main-container--galeria-page {
+    background-color: #3bb2b8;
+    background: linear-gradient(25deg, rgba(66, 230, 149, 1), rgba(66, 32, 149, 1));
+    background-repeat: no-repeat;
+    font-family: "Quicksand", sans-serif;
+    margin-top: -114px;
+    padding-top: 114px;
+    padding-bottom: 30px;
+}
+
+/* Boton volver arriba */
+.scroll-top {
+    color: #fff;
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+}
+.cookie-banner p {
+    display: inline;
+    margin-right: 10px;
+}
+.cookie-banner a {
+    color: #ffa200;
+    text-decoration: underline;
+}
+.accept-cookies {
+    background-color: #ffa200;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.accept-cookies:hover {
+    background-color: #cc8400;
+}
+
+/* Estilos adicionales del calendario (styles_calendar.css) */
+.container, .show-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100vh;
+    height: auto;
+}
+.show-image, img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+form {
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para pantallas más grandes con Media Queries */
+@media (min-width: 768px) {
+    .cabecera {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1050;
+    }
+    .logo-header {
+        height: 100px;
+        margin-left: 40px;
+    }
+    .cabecera nav {
+        display: flex;
+        position: static;
+        border: none;
+        background-color: transparent;
+        width: auto;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .cabecera nav ul {
+        flex-direction: row;
+        margin: 0 25px 0 0;
+    }
+    .cabecera nav ul li, .cabecera nav ul li:last-child {
+        border: none;
+    }
+    .cabecera nav ul li span {
+        display: inline;
+        color: var(--amarillo-base);
+        margin: 0 5px;
+        font-size: 1rem;
+    }
+    .top-spacer {
+        height: 114px;
+    }
+    .slider {
+        position: relative;
+    }
+    .anuncio {
+        height: 80vh;
+        position: relative;
+        padding: 0;
+    }
+    .anuncio p {
+        padding: 20px 0;
+    }
+    .boton-anuncio a {
+        margin-top: 20px;
+        position: absolute;
+        width: 100%;
+    }
+    .niveles-container-home {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .boton--solicitud-evaluacion {
+        width: 100%;
+        padding: 15px 50px;
+        font-size: 3rem;
+    }
+    .caracteristicas-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .caracteristica {
+        flex: 1 1 33%;
+    }
+    .sobre-nosotros {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 0;
+    }
+    .sobre-nosotros--container1, .sobre-nosotros--container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+    }
+    .mensaje-director {
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+    .sobre-nosotros--container1 h3 {
+        border: solid 3px transparent;
+    }
+    .sobre-nosotros--container1 h3:hover {
+        color: var(--rojo);
+        border-bottom: solid 3px var(--texto-claro);
+    }
+    .sobre-nosotros--container1 p {
+        font-size: 2.6rem;
+        font-weight: 400;
+    }
+    .img-nosotros {
+        width: 60%;
+    }
+    .mensaje-director {
+        text-shadow: 2px 2px 4px transparent, -2px -2px 4px transparent;
+    }
+    .mensaje-director:hover {
+        text-shadow: 2px 2px 5px white, -2px -2px 5px white;
+    }
+    .calendario-escolar {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 85vh;
+        padding: 0;
+    }
+    .calendario-escolar .calendario img {
+        width: 60%;
+    }
+    .calendario-intro h2 {
+        font-size: 4rem;
+    }
+    .boton-calendario {
+        width: 100%;
+    }
+    .galeria {
+        padding-bottom: 40px;
+    }
+    .galeria h2 {
+        font-size: 4rem;
+    }
+    .popup-option.active {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .mensaje-director-container {
+        padding-left: 15px;
+    }
+    .gallery {
+        display: none;
+    }
+    .galeria-container {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+    .galeria-item img {
+        height: 75vh;
+        width: auto;
+    }
+    .section--niveles-educativos {
+        padding: 30px 100px;
+    }
+    .social-buttons {
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .social-buttons a {
+        margin: 0 10px;
+    }
+    .social-buttons a img {
+        width: 80px;
+    }
+    .contact-info-footer {
+        flex-direction: row;
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+    .contact-info-footer p br {
+        display: inline;
+    }
+    .contenedor-redes {
+        height: auto;
+    }
+    .galeria-team {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 20px 50px;
+    }
+    .main-nosotros {
+        padding: 0 150px;
+        padding-bottom: 50px;
+    }
+    .sellos--container-list {
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+        gap: 100px;
+    }
+    .sello-item {
+        flex-direction: column;
+    }
+    .planes-trabajo--container-items {
+        flex-direction: row;
+    }
+    .planes-trabajo-item {
+        flex-direction: row;
+        align-content: center;
+        width: 50%;
+        height: 100px;
+    }
+    .metodologia-container-items {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .planes-trabajo--container h2, .metodologia-container h2 {
+        margin-bottom: 10px;
+    }
+    .documentos-institucionales--container ul li {
+        width: 60%;
+        border: solid 3px transparent;
+    }
+    .documentos-institucionales--container ul li:hover {
+        border: solid 3px var(--verde);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cabecera nav ul li a {
+        font-size: 1.5rem;
+    }
+}

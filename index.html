@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Spicy+Rice&display=&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Spicy+Rice&display=&family=Dancing+Script:wght@400..700&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <title>Escuela de Lenguaje Nube y Sol</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles_calendar.css">
   <link rel="stylesheet" type="text/css" href="galeria.css">
   <!-- <link rel="stylesheet" href="sectionsys.css"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -332,11 +333,17 @@
 <!-- PAGINA CALENDARIO -->
 <section id="main-container--calendario-page">
     <h1 class="titulo-pagina titulo-pagina-calendario">Calendario Escolar de actividades</h1>
-<div class="img-provisional">
+<!-- <div class="img-provisional">
   <img class="item-img-provisional" src="img/calendario-post.png" alt="Calendario del mes">
-</div>
-<div class="calendario_ext">
+</div> -->
+<!-- <div class="calendario_ext">
   <iframe src="https://escuelanubeysol.cl/homesite/calendario" width="100%" height="600px"></iframe>
+</div> -->
+<div class="container-calendario">
+  <div class="show-container">
+    <!-- <h1 class="permanent-marker-regular">Imagen del Calendario</h1> -->
+    <img id="displayedImage" class="show-image" src="uploads/imagen-calendario.jpg" alt="Imagen Calendario">
+  </div>
 </div>
 
 </section>
@@ -542,7 +549,8 @@
   <!-- Banner de Cookies -->
 <div id="cookie-banner" class="cookie-banner">
   <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta el uso de cookies. 
-      <a href="politica-de-cookies.html" target="_blank">Más información</a>.
+      <!-- <a href="politica-de-cookies.html" target="_blank">Más información</a>. -->
+       <a href="politicas.html">M&aacute;s informaci&oacute;n</a>
   </p>
   <button id="accept-cookies" class="accept-cookies">Aceptar</button>
 </div>

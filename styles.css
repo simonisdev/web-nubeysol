@@ -1213,7 +1213,12 @@ width: 25px;
 }
 
 /* PAGINA CALENDARIO */
-
+.container-calendario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
 /* PAGINA NOSOTROS */
 .main-nosotros {
   padding: 0 150px;
