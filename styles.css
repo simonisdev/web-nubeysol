@@ -910,6 +910,7 @@ width: 25px;
   margin-top: -114px;
   padding-top: 114px;
   padding-bottom: 30px;
+  color: var(--texto-claro);
 }
 
 /* Boton volver arriba */
