@@ -31,6 +31,10 @@
             <li class="menu-item"><a href="#calendario" onclick="mostrarSeccion('main-container--calendario-page')">Calendario Escolar</a><span>|</span></li>
             <li class="menu-item"><a href="#documentos" onclick="mostrarSeccion('main-container--documentos-page')">Documentos Institucionales</a><span>|</span></li>
             <li class="menu-item"><a href="#galeria" onclick="mostrarSeccion('main-container--galeria-page')">Galería de fotos</a><span>|</span></li>
+            <li class="menu-item">
+              <a href="#escuela-para-padres" onclick="mostrarSeccion('main-container--padres-page')">Escuela para Padres</a>
+              <span>|</span>
+            </li>            
             <li class="menu-item"><a href="#contacto" onclick="mostrarSeccion('main-container--contacto-page')">Contacto</a><span>|</span></li>
             <li class="menu-item"><a href="#equipo" onclick="mostrarSeccion('main-container--equipo-page')">Equipo</a><span>|</span></li>
             <li class="menu-item"><a href="#home" onclick="mostrarSeccion('main-container--home-page')">Inicio</a></li>
@@ -142,7 +146,7 @@
             <h4>"Mensaje de la Directora"</h4>
             <!-- <p>[Mensaje del director]</p> -->
           </div>
-          <img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="" class="img-nosotros">
+          <img loading="lazy" src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="" class="img-nosotros">
         </div>
       </div>
     
@@ -151,7 +155,7 @@
       <div class="popup-content">
           <span class="close-button">&times;</span>
           <div id="popup-option1" class="popup-option">
-            <img src="img/personal/VivianCarvajal_fondoBlanco.jpg" alt="Director">
+            <img loading="lazy" src="img/personal/VivianCarvajal_fondoBlanco.jpg" alt="Director">
             <!-- <p>Este es el texto del mensaje del Director.</p> -->
             <div class="mensaje-director-container">
               <p>
@@ -171,12 +175,13 @@
 
         <div class="calendario">
           <a href="#calendario" onclick="mostrarSeccion('main-container--calendario-page')">
-            <img src="img/imagen_calendario.jpg" alt="">
+            <img loading="lazy" src="img/imagen_calendario.jpg" alt="">
           </a>
         </div>
 
         <div class="calendario-intro">
           <h2>Calendario Escolar</h2>
+          <!-- <h2><a href="#calendario" onclick="mostrarSeccion('main-container--calendario-page')">Calendario Escolar</a></h2> -->
           <div class="boton-calendario">
             <a href="#calendario" onclick="mostrarSeccion('main-container--calendario-page')">Conoce las actividades programadas aqu&iacute;...</a>
           </div>
@@ -342,7 +347,7 @@
 <div class="container-calendario">
   <div class="show-container">
     <!-- <h1 class="permanent-marker-regular">Imagen del Calendario</h1> -->
-    <img id="displayedImage" class="show-image" src="uploads/imagen-calendario.jpg" alt="Imagen Calendario">
+    <img id="displayedImage" class="show-image" src="actualizar_calendario/uploads/imagen-calendario.jpg" alt="Imagen Calendario">
   </div>
 </div>
 
@@ -361,14 +366,26 @@
           <p>
       </div>
       <div class="documentos-institucionales--container">
-        <ul>
+        <!-- <ul>
           <li><a href="doc-inst/PEI OFICIAL  NUBE Y SOL 2024.pdf" target="_blank">PEI</a></li>
           <li><a href="doc-inst/PISE 2024.pdf" target="_blank">PISE</a></li>
           <li><a href="doc-inst/PLAN DE FORMACION CIUDADANA NUBE Y SOL 2024.pdf" target="_blank">PLAN DE FORMACI&Oacute;N CIUDADANA NUBE Y SOL 2024</a></li>
           <li><a href="doc-inst/PLAN DE SEXUALIDAD NUBE Y SOL 2024.pdf" target="_blank">PLAN DE SEXUALIDAD NUBE Y SOL 2024</a></li>
           <li><a href="doc-inst/REGLAMENTO DE EVALUACIÓN 2024.pdf" target="_blank">REGLAMENTO DE EVALUACI&Oacute;N 2024</a></li>
           <li><a href="doc-inst/REGLAMENTO INTERNO DE HIGIENE, ORDEN Y SEGURIDAD 2024.pdf" target="_blank">REGLAMENTO INTERNO DE HIGIENE, ORDEN Y SEGURIDAD 2024</a></li>
+        </ul> -->
+
+        <ul>
+          <li><a href="doc-inst-25/PROYECTO EDUCATIVO INSTITUCIONAL2025.docx.pdf" target="_blank">PEI</a></li>
+          <li><a href="doc-inst-25/Plan Integral de Seguridad Escolar 2025.docx (1).pdf" target="_blank">PISE</a></li>
+          <li><a href="doc-inst-25/PLAN DE FORMACION CIUDADANA NUBE Y SOL 2025.pdf" target="_blank">PLAN DE FORMACI&Oacute;N CIUDADANA NUBE Y SOL 2025</a></li>
+          <li><a href="doc-inst-25/PLAN DE SEXUALIDAD NUBE Y SOL 2025.pdf" target="_blank">PLAN DE SEXUALIDAD NUBE Y SOL 2025</a></li>
+          <li><a href="doc-inst-25/REGLAMENTO DE EVALUACIÓN 2025.pdf" target="_blank">REGLAMENTO DE EVALUACI&Oacute;N 2025</a></li>
+          <li><a href="doc-inst-25/REGLAMENTO INTERNO DE HIGIENE, ORDEN Y SEGURIDAD 2025.pdf" target="_blank">REGLAMENTO INTERNO DE HIGIENE, ORDEN Y SEGURIDAD 2025</a></li>
+          <li><a href="doc-inst-25/PLAN DE CONVIVENCIA ESCOLAR 2025.pdf" target="_blank">PLAN DE CONVIVENCIA ESCOLAR 2025</a></li>
+          <li><a href="doc-inst-25/cuentapublica2024.pdf" target="_blank">CUENTA P&Uacute;BLICA 2024</a></li>
         </ul>
+
       </div>
       </div>
 </section>
@@ -380,80 +397,80 @@
       <h2 class="text-center">GALER&Iacute;A DE FOTOS</h2>
       <div class="lightbox-gallery">
           <div>
-            <img src="img/dia de la familia 2023 - foto 2.jpeg" data-image-hd="img/dia de la familia 2023 - foto 2.jpeg" alt="D&iacute;a de la familia (2023)">
+            <img src="img/dia de la familia 2023 - foto 2.jpeg" data-image-hd="img/dia de la familia 2023 - foto 2.jpeg" alt="D&iacute;a de la familia (2023)" loading="lazy">
           </div>
           <div>
-            <img src="img/en la sala - visita cuidado dientes.jpeg" data-image-hd="img/en la sala - visita cuidado dientes.jpeg" alt="Cuidado de nuestros dientes, visita en sala.">
+            <img src="img/en la sala - visita cuidado dientes.jpeg" data-image-hd="img/en la sala - visita cuidado dientes.jpeg" alt="Cuidado de nuestros dientes, visita en sala." loading="lazy">
           </div>
           <div>
-            <img src="img/jardin tia mayo.jpeg" data-image-hd="img/jardin tia mayo.jpeg" alt="Celebrando con la t&iacute;a Mayo">
+            <img src="img/jardin tia mayo.jpeg" data-image-hd="img/jardin tia mayo.jpeg" alt="Celebrando con la t&iacute;a Mayo" loading="lazy">
           </div>
           <div>
-            <img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" data-image-hd="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="En el patio">
+            <img src="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" data-image-hd="img/nube_y_sol_todos_en_el_patio_(cuadrada).jpg" alt="En el patio" loading="lazy">
           </div>
           <div>
-            <img src="img/dia de la familia 2023.jpeg" data-image-hd="img/dia de la familia 2023.jpeg" alt="D&iacute;a de la familia (2023)">
+            <img src="img/dia de la familia 2023.jpeg" data-image-hd="img/dia de la familia 2023.jpeg" alt="D&iacute;a de la familia (2023)" loading="lazy">
           </div>
           <div>
-            <img src="img/las tias traje tipico nortino.jpeg" data-image-hd="img/las tias traje tipico nortino.jpeg" alt="D&iacute;a de la cultura nortina">
+            <img src="img/las tias traje tipico nortino.jpeg" data-image-hd="img/las tias traje tipico nortino.jpeg" alt="D&iacute;a de la cultura nortina" loading="lazy">
           </div>
           <!-- Nuevas imágenes -->
           <div>
-            <img src="img/galeria/nubeysol_foto (1).jpg" data-image-hd="img/galeria/nubeysol_foto (1).jpg" alt="Galería Nube y Sol 1">
+            <img src="img/galeria/nubeysol_foto (1).jpg" data-image-hd="img/galeria/nubeysol_foto (1).jpg" alt="Galería Nube y Sol 1" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (2).jpg" data-image-hd="img/galeria/nubeysol_foto (2).jpg" alt="Galería Nube y Sol 2">
+            <img src="img/galeria/nubeysol_foto (2).jpg" data-image-hd="img/galeria/nubeysol_foto (2).jpg" alt="Galería Nube y Sol 2" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (3).jpg" data-image-hd="img/galeria/nubeysol_foto (3).jpg" alt="Galería Nube y Sol 3">
+            <img src="img/galeria/nubeysol_foto (3).jpg" data-image-hd="img/galeria/nubeysol_foto (3).jpg" alt="Galería Nube y Sol 3" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (4).jpg" data-image-hd="img/galeria/nubeysol_foto (4).jpg" alt="Galería Nube y Sol 4">
+            <img src="img/galeria/nubeysol_foto (4).jpg" data-image-hd="img/galeria/nubeysol_foto (4).jpg" alt="Galería Nube y Sol 4" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (5).jpg" data-image-hd="img/galeria/nubeysol_foto (5).jpg" alt="Galería Nube y Sol 5">
+            <img src="img/galeria/nubeysol_foto (5).jpg" data-image-hd="img/galeria/nubeysol_foto (5).jpg" alt="Galería Nube y Sol 5" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (6).jpg" data-image-hd="img/galeria/nubeysol_foto (6).jpg" alt="Galería Nube y Sol 6">
+            <img src="img/galeria/nubeysol_foto (6).jpg" data-image-hd="img/galeria/nubeysol_foto (6).jpg" alt="Galería Nube y Sol 6" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (7).jpg" data-image-hd="img/galeria/nubeysol_foto (7).jpg" alt="Galería Nube y Sol 7">
+            <img src="img/galeria/nubeysol_foto (7).jpg" data-image-hd="img/galeria/nubeysol_foto (7).jpg" alt="Galería Nube y Sol 7" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (8).jpg" data-image-hd="img/galeria/nubeysol_foto (8).jpg" alt="Galería Nube y Sol 8">
+            <img src="img/galeria/nubeysol_foto (8).jpg" data-image-hd="img/galeria/nubeysol_foto (8).jpg" alt="Galería Nube y Sol 8" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (9).jpg" data-image-hd="img/galeria/nubeysol_foto (9).jpg" alt="Galería Nube y Sol 9">
+            <img src="img/galeria/nubeysol_foto (9).jpg" data-image-hd="img/galeria/nubeysol_foto (9).jpg" alt="Galería Nube y Sol 9" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (10).jpg" data-image-hd="img/galeria/nubeysol_foto (10).jpg" alt="Galería Nube y Sol 10">
+            <img src="img/galeria/nubeysol_foto (10).jpg" data-image-hd="img/galeria/nubeysol_foto (10).jpg" alt="Galería Nube y Sol 10" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (11).jpg" data-image-hd="img/galeria/nubeysol_foto (11).jpg" alt="Galería Nube y Sol 11">
+            <img src="img/galeria/nubeysol_foto (11).jpg" data-image-hd="img/galeria/nubeysol_foto (11).jpg" alt="Galería Nube y Sol 11" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (12).jpg" data-image-hd="img/galeria/nubeysol_foto (12).jpg" alt="Galería Nube y Sol 12">
+            <img src="img/galeria/nubeysol_foto (12).jpg" data-image-hd="img/galeria/nubeysol_foto (12).jpg" alt="Galería Nube y Sol 12" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (13).jpg" data-image-hd="img/galeria/nubeysol_foto (13).jpg" alt="Galería Nube y Sol 13">
+            <img src="img/galeria/nubeysol_foto (13).jpg" data-image-hd="img/galeria/nubeysol_foto (13).jpg" alt="Galería Nube y Sol 13" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (14).jpg" data-image-hd="img/galeria/nubeysol_foto (14).jpg" alt="Galería Nube y Sol 14">
+            <img src="img/galeria/nubeysol_foto (14).jpg" data-image-hd="img/galeria/nubeysol_foto (14).jpg" alt="Galería Nube y Sol 14" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (15).jpg" data-image-hd="img/galeria/nubeysol_foto (15).jpg" alt="Galería Nube y Sol 15">
+            <img src="img/galeria/nubeysol_foto (15).jpg" data-image-hd="img/galeria/nubeysol_foto (15).jpg" alt="Galería Nube y Sol 15" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (16).jpg" data-image-hd="img/galeria/nubeysol_foto (16).jpg" alt="Galería Nube y Sol 16">
+            <img src="img/galeria/nubeysol_foto (16).jpg" data-image-hd="img/galeria/nubeysol_foto (16).jpg" alt="Galería Nube y Sol 16" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (17).jpg" data-image-hd="img/galeria/nubeysol_foto (17).jpg" alt="Galería Nube y Sol 17">
+            <img src="img/galeria/nubeysol_foto (17).jpg" data-image-hd="img/galeria/nubeysol_foto (17).jpg" alt="Galería Nube y Sol 17" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (18).jpg" data-image-hd="img/galeria/nubeysol_foto (18).jpg" alt="Galería Nube y Sol 18">
+            <img src="img/galeria/nubeysol_foto (18).jpg" data-image-hd="img/galeria/nubeysol_foto (18).jpg" alt="Galería Nube y Sol 18" loading="lazy">
           </div>
           <div>
-            <img src="img/galeria/nubeysol_foto (19).jpg" data-image-hd="img/galeria/nubeysol_foto (19).jpg" alt="Galería Nube y Sol 19">
+            <img src="img/galeria/nubeysol_foto (19).jpg" data-image-hd="img/galeria/nubeysol_foto (19).jpg" alt="Galería Nube y Sol 19" loading="lazy">
           </div>
       </div>
   </div>
@@ -478,48 +495,80 @@
     <div style="background-color: #007BFF;">
         <h1 class="titulo-pagina titulo-pagina-equipo">NUESTRO EQUIPO PROFESIONAL</h1>
       </div>
-        
       <div class="galeria-team">
         <div class="galeria-team-item">
-          <img src="img/personal/VivianCarvajal.jpg" alt="Vivian Carvajal Pizarro">
+          <img src="img/personal/VivianCarvajal.jpg" alt="Vivian Carvajal Pizarro" loading="lazy">
           <label>Vivian Carvajal Pizarro<br><span>Directora</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/ClaudiaLopez.jpg" alt="Claudia Lopez Vargas">
+          <img src="img/personal/ClaudiaLopez.jpg" alt="Claudia Lopez Vargas" loading="lazy">
           <label>Claudia L&oacute;pez Vargas<br><span>Fonoaudi&oacute;loga</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/CarolinaAllavide.jpg" alt="Carolina Allavide Flores">
+          <img src="img/personal/CarolinaAllavide.jpg" alt="Carolina Allavide Flores" loading="lazy">
           <label>Carolina Allavide Flores<br><span>Educadora diferencial</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/SirleyAzargado.jpg" alt="Sirley Azargado Sotelo">
+          <img src="img/personal/SirleyAzargado.jpg" alt="Sirley Azargado Sotelo" loading="lazy">
           <label>Sirley Azargado Sotelo<br><span>Educadora diferencial</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/MaryorieQuezada.jpg" alt="Maryorie Quezada Vargas">
+          <img src="img/personal/MaryorieQuezada.jpg" alt="Maryorie Quezada Vargas" loading="lazy">
           <label>Maryorie Quezada Vargas<br><span>Educadora diferencial</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/NickolsBurgos.jpg" alt="Nickols Burgos Troncoso">
+          <img src="img/personal/NickolsBurgos.jpg" alt="Nickols Burgos Troncoso" loading="lazy">
           <label>Nickols Burgos Troncoso<br><span>Educadora diferencial</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/AlisonAguirre.jpg" alt="Alison Aguirre">
+          <img src="img/personal/AlisonAguirre.jpg" alt="Alison Aguirre" loading="lazy">
           <label>Alison Aguirre<br><span>T&eacute;cnico diferencial</span></label>
         </div>
         <div class="galeria-team-item">
-          <img src="img/personal/CamilaCabezas.jpg" alt="Camila Cabezas Curril">
+          <img src="img/personal/CamilaCabezas.jpg" alt="Camila Cabezas Curril" loading="lazy">
           <label>Camila Cabezas Curril<br><span>T&eacute;cnico diferencial</span></label>
-        </div> 
+        </div>
         <div class="galeria-team-item">
-          <img src="img/personal/GlendaRivera.jpg" alt="Glenda Rivera Monardez">
-          <label>Glenda Rivera Monardez<br><span>Servicios Generales</span></label>
-        </div>   
+          <img src="img/personal/AnaPatriciaBarbadilloEspinoza.jpg" alt="Ana Patricia Barbadillo Espinoza" loading="lazy">
+          <label>Patricia Barbadillo Espinoza<br><span>Servicios Generales</span></label>
+        </div> 
       </div>
+
       <div style="margin-top: 2px; margin-bottom: 2px; height: 2px; background-color: rgb(255, 238, 0);"></div>  
 </section>
 <!-- FIN PAGINA EQUIPO -->
+
+<!-- PAGINA ESCUELA PARA PADRES -->
+<section id="main-container--padres-page">
+  <main class="main-nosotros">
+    <h1 class="titulo-pagina">ESCUELA PARA PADRES</h1>
+
+    <p style="text-align: justify; margin-bottom: 30px;">
+      Esta sección está dedicada a apoyar a madres, padres y apoderados en su importante labor. Aquí encontrarás recursos, actividades y documentos útiles para acompañar el proceso educativo de tus hijos.
+    </p>
+
+    <div class="container galeria-container">
+      <h2 class="text-center">Galería de Actividades</h2>
+      <div class="lightbox-gallery">
+        <div><img src="img/padres/actividad1.jpg" data-image-hd="img/padres/actividad1.jpg" alt="Actividad para padres 1"></div>
+        <div><img src="img/padres/actividad2.jpg" data-image-hd="img/padres/actividad2.jpg" alt="Actividad para padres 2"></div>
+        <div><img src="img/padres/actividad3.jpg" data-image-hd="img/padres/actividad3.jpg" alt="Actividad para padres 3"></div>
+        <!-- Puedes reemplazar con imágenes reales o dejar como placeholder -->
+      </div>
+    </div>
+
+    <div class="documentos-institucionales--container" style="margin-top: 50px;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Documentos para Descargar</h2>
+      <ul>
+        <li><a href="doc-padres/guia_apoyo_familiar.pdf" target="_blank">Guía de Apoyo Familiar</a></li>
+        <li><a href="doc-padres/taller_emociones_ninos.pdf" target="_blank">Taller: Emociones en la Infancia</a></li>
+        <li><a href="doc-padres/recomendaciones_casa.pdf" target="_blank">Recomendaciones para el hogar</a></li>
+      </ul>
+    </div>
+  </main>
+</section>
+
+<!-- FIN PAGINA ESCUELA PARA PADRES -->
 
 <!-- FOOTER -->
 
@@ -548,8 +597,7 @@
 
   <!-- Banner de Cookies -->
 <div id="cookie-banner" class="cookie-banner">
-  <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta el uso de cookies. 
-      <!-- <a href="politica-de-cookies.html" target="_blank">Más información</a>. -->
+  <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta el uso de cookies.
        <a href="politicas.html">M&aacute;s informaci&oacute;n</a>
   </p>
   <button id="accept-cookies" class="accept-cookies">Aceptar</button>
@@ -557,13 +605,6 @@
 
 
     <div class="footer-content">
-        <!-- <div class="contact-info-footer">
-          <img src="" alt="">
-            <p>Email:<br>escuelalenguajenubeysol@gmail.com</p>
-            <p>Teléfono:<br>057 - 2418722</p>
-            <p>Celular:<br>+56 9 45484837</p>
-            <p>Dirección:<br>Piloto Pardo # 1594 (esquina Oscar Bonilla)</p>
-        </div> -->
         <div class="contact-info-footer">
           <div class="contact-item">
               <img src="img/i_contacto/icons8-correo-de-manzana.svg" alt="Icono de email" class="contact-icon">
@@ -584,21 +625,6 @@
             </a>
           </div>
       </div>
-      
-        <!-- <div class="contenedor-redes">
-          <a class="link-contacto" href="https://www.facebook.com/Escuelalenguajenubeysol/" target="_blank">
-              <img src="img/rrss/facebook.png" alt="Facebook">
-          </a>
-          <a class="link-contacto" href="https://www.instagram.com/escuelalenguajenubeysol/" target="_blank">
-              <img src="img/rrss/instagram.png" alt="Instagram">
-          </a>
-          <a class="link-contacto" href="https://api.whatsapp.com/send?phone=56945484837" target="_blank">
-              <img src="img/rrss/whatsapp.png" alt="Whatsapp">
-          </a>
-          <a class="link-contacto" href="https://maps.app.goo.gl/iTjD3FDxBGhFQzMG7" target="_blank">
-              <img src="img/rrss/icono_mapa.png" alt="Contacto" title="Contacto">
-          </a>
-        </div> -->
     </div>
       <div class="copyright-style">
         &copy; 2024. Escuela Nube y Sol. Todos los derechos reservados.
@@ -614,6 +640,9 @@
 
     <script>
            function mostrarSeccion(id) {
+            // Altura de la cabecera fija (ajusta este valor según tu CSS)
+    const cabecera = document.querySelector('.cabecera');
+    const headerHeight = cabecera ? cabecera.offsetHeight : 0;
               // Si hay un parámetro, cambia la sección activa según el ID proporcionado
               if (id) {
                   // Oculta todas las secciones
@@ -623,10 +652,22 @@
                   });
 
                   // Muestra la sección seleccionada
-                  document.getElementById(id).classList.add('active');
+                  // document.getElementById(id).classList.add('active');
+                  const targetSection = document.getElementById(id);
+                  targetSection.classList.add('active');
+
+                  // Desplaza la sección seleccionada hasta la parte superior de la pantalla
+                  // targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  const sectionTop = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top: sectionTop, behavior: 'smooth' });
               } else {
                   // Si no hay parámetro, muestra la sección home por defecto
-                  document.getElementById('main-container--home-page').classList.add('active');
+                  // document.getElementById('main-container--home-page').classList.add('active');
+                  const homeSection = document.getElementById('main-container--home-page');
+                  homeSection.classList.add('active');
+                  // homeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  const sectionTop = homeSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top: sectionTop, behavior: 'smooth' });
               }
             }
             // Llama a mostrarSeccion sin parámetros al cargar la página para activar la sección home

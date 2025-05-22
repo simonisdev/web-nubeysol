@@ -122,6 +122,12 @@ border-right: 1px solid #fff;
 .cabecera nav ul li span {
   display: none;
 }
+
+nav.open {
+  display: block;
+  /* Otros estilos */
+}
+
 .cabecera  nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -817,6 +823,54 @@ width: 25px;
   font-weight: bold;
   font-size: 1.3rem;
 }
+
+/* PAGINA ESCUELA PARA PADRES */
+#main-container--padres-page {
+  background-color: var(--azul-claro);
+  color: var(--texto-oscuro);
+  padding: 50px 30px;
+  font-family: var(--font-quicksand);
+}
+
+#main-container--padres-page h1,
+#main-container--padres-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#main-container--padres-page .lightbox-gallery div img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#main-container--padres-page .documentos-institucionales--container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-container--padres-page .documentos-institucionales--container ul li {
+  background-color: var(--amarillo-base);
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 10px;
+  list-style: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+#main-container--padres-page .documentos-institucionales--container ul li a {
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+
+#main-container--padres-page .documentos-institucionales--container ul li:hover {
+  background-color: var(--verde);
+}
+
 
 /* PAGINA NOSOTROS */
 .main-documentos,

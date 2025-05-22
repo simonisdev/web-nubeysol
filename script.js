@@ -1,10 +1,28 @@
 // menú toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const botonMenu = document.querySelector('.menu-toggle');
-  const cabecera = document.querySelector('.cabecera');
+// document.addEventListener('DOMContentLoaded', function() {
+//   const botonMenu = document.querySelector('.menu-toggle');
+//   const cabecera = document.querySelector('.cabecera');
 
-  botonMenu.addEventListener('click', function() {
-    cabecera.classList.toggle('nav-active');
+//   botonMenu.addEventListener('click', function() {
+//     cabecera.classList.toggle('nav-active');
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+  const menuItems = document.querySelectorAll("nav ul li a");
+
+  // Cierra el menú al hacer clic en una opción
+  menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+      nav.classList.remove("open"); // Cierra el menú
+    });
+  });
+
+  // Alterna el menú al hacer clic en el botón de menú
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
   });
 });
 
